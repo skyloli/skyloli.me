@@ -818,11 +818,11 @@ footer:
     version: true
   # -------------------------------------------------------------
   # Any custom text can be defined here.
-  custom_text: 托管于<a href="https://github.com/" target="_blank" rel="nofollow"> GitHub</a>. <a href="https://dash.cloudflare.com" target="_blank" rel="nofollow">cloudflare </a>提供 DNS 解析服务.
+  custom_text: 托管于<a href="https://github.com/" target="_blank" rel="nofollow"> GitHub</a>. <a href="https://dash.cloudflare.com" target="_blank" rel="nofollow">cloudflare </a>提供 CDN 解析服务.
   sitemap: /sitemap.xml
   beian:
 
-online_api: wss://api.diygod.me/online/
+online_api:
 
 description: <span>写代码是热爱，</span><span>写到世界充满爱！</span>
 
