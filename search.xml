@@ -20,8 +20,8 @@
         <category>消息队列</category>
       </categories>
       <tags>
-        <tag>java</tag>
         <tag>centos7</tag>
+        <tag>java</tag>
         <tag>rabbitmq</tag>
       </tags>
   </entry>
