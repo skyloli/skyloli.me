@@ -1,7 +1,7 @@
 ---
 title: Failed to start LSB
 date: 2019-5-1 22:53:25
-tags: [Linux,CentOS,CentOS7]
+tags: [Linux,CentOS7]
 categories:
   - Linux
 ---
