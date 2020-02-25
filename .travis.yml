@@ -28,7 +28,7 @@ cache:
 deploy:
   provider: pages
   skip_cleanup: true
-  github_token: $GH_TOKEN
+  github_token: $GITHUB_TOKEN
   keep_history: true
   local_dir: public
   fqdn: aphage.me
