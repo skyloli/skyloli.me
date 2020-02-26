@@ -1353,11 +1353,6 @@ ee-first@1.1.1:
   resolved "https://registry.yarnpkg.com/ee-first/-/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
   integrity sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
 
-ejs@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.npmjs.org/ejs/-/ejs-1.0.0.tgz#c9c60a48a46ee452fb32a71c317b95e5aa1fcb3d"
-  integrity sha1-ycYKSKRu5FL7MqccMXuV5aofyz0=
-
 ejs@^2.6.1:
   version "2.7.4"
   resolved "https://registry.yarnpkg.com/ejs/-/ejs-2.7.4.tgz#48661287573dcc53e366c7a1ae52c3a120eec9ba"
@@ -2326,14 +2321,12 @@ hexo-generator-index@^1.0.0:
   dependencies:
     hexo-pagination "1.0.0"
 
-hexo-generator-searchdb@1.0.8:
-  version "1.0.8"
-  resolved "https://registry.npmjs.org/hexo-generator-searchdb/-/hexo-generator-searchdb-1.0.8.tgz#04245256e1413a66313932dbf1c0a7e568559301"
-  integrity sha1-BCRSVuFBOmYxOTLb8cCn5WhVkwE=
+hexo-generator-searchdb@1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/hexo-generator-searchdb/-/hexo-generator-searchdb-1.2.0.tgz#ebf1ec38be78d447d4ae7b7f358d312473a7a90b"
+  integrity sha512-/3R5cH7McZlNgkesGzdCJXAnabf8lJvWCojcRM3jTs/P+bpiKqiKanZjINSjMHoXW+05S2ccI1bJnWDS6Z3zgA==
   dependencies:
-    ejs "^1.0.0"
-    striptags latest
-    utils-merge "^1.0.0"
+    nunjucks "^3.2.0"
 
 hexo-generator-sitemap@1.2.0:
   version "1.2.0"
@@ -2365,13 +2358,6 @@ hexo-log@^0.2.0:
   dependencies:
     chalk "^1.1.1"
     hexo-bunyan "^1.0.0"
-
-hexo-pagination@0.0.2:
-  version "0.0.2"
-  resolved "https://registry.npmjs.org/hexo-pagination/-/hexo-pagination-0.0.2.tgz#8cf470c7db0de5b18a3926a76deb194015df7f2b"
-  integrity sha1-jPRwx9sN5bGKOSanbesZQBXffys=
-  dependencies:
-    utils-merge "^1.0.0"
 
 hexo-pagination@1.0.0:
   version "1.0.0"
@@ -3807,14 +3793,13 @@ nunjucks@^2.3.0:
     chokidar "^1.6.0"
     yargs "^3.32.0"
 
-nunjucks@^3.0.0, nunjucks@^3.1.2:
-  version "3.1.3"
-  resolved "https://registry.npmjs.org/nunjucks/-/nunjucks-3.1.3.tgz#9a23c844af01c143a0b40f3bdd1212a9d7877260"
-  integrity sha512-UtlKKAzg9vdtvURdNy9DjGhiB7qYf2R7Ez+hsucOQG5gYJexSggXSSZ+9IpSDyKOlWu/4rMVPH2oVoANOSqNKA==
+nunjucks@^3.0.0, nunjucks@^3.1.2, nunjucks@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/nunjucks/-/nunjucks-3.2.0.tgz#53e95f43c9555e822e8950008a201b1002d49933"
+  integrity sha512-YS/qEQ6N7qCnUdm6EoYRBfJUdWNT0PpKbbRnogV2XyXbBm2STIP1O6yrdZHgwMVK7fIYUx7i8+yatEixnXSB1w==
   dependencies:
     a-sync-waterfall "^1.0.0"
     asap "^2.0.3"
-    postinstall-build "^5.0.1"
     yargs "^3.32.0"
   optionalDependencies:
     chokidar "^2.0.0"
@@ -4201,11 +4186,6 @@ posix-character-classes@^0.1.0:
   version "0.1.1"
   resolved "https://registry.npmjs.org/posix-character-classes/-/posix-character-classes-0.1.1.tgz#01eac0fe3b5af71a2a6c02feabb8c1fef7e00eab"
   integrity sha1-AerA/jta9xoqbAL+q7jB/vfgDqs=
-
-postinstall-build@^5.0.1:
-  version "5.0.1"
-  resolved "https://registry.npmjs.org/postinstall-build/-/postinstall-build-5.0.1.tgz#b917a9079b26178d9a24af5a5cd8cb4a991d11b9"
-  integrity sha1-uRepB5smF42aJK9aXNjLSpkdEbk=
 
 prepend-http@^1.0.1:
   version "1.0.4"
@@ -4959,11 +4939,6 @@ striptags@^3.1.1:
   resolved "https://registry.yarnpkg.com/striptags/-/striptags-3.1.1.tgz#c8c3e7fdd6fb4bb3a32a3b752e5b5e3e38093ebd"
   integrity sha1-yMPn/db7S7OjKjt1LltePjgJPr0=
 
-striptags@latest:
-  version "3.1.0"
-  resolved "https://registry.npmjs.org/striptags/-/striptags-3.1.0.tgz#763e534338d9cf542f004a4b1eb099e32d295e44"
-  integrity sha1-dj5TQzjZz1QvAEpLHrCZ4y0pXkQ=
-
 stylus@0.54.5, stylus@^0.54.5:
   version "0.54.5"
   resolved "https://registry.npmjs.org/stylus/-/stylus-0.54.5.tgz#42b9560931ca7090ce8515a798ba9e6aa3d6dc79"
@@ -5317,7 +5292,7 @@ util.promisify@~1.0.0:
     define-properties "^1.1.2"
     object.getownpropertydescriptors "^2.0.3"
 
-utils-merge@1.0.1, utils-merge@^1.0.0:
+utils-merge@1.0.1:
   version "1.0.1"
   resolved "https://registry.npmjs.org/utils-merge/-/utils-merge-1.0.1.tgz#9f95710f50a267947b2ccc124741c1028427e713"
   integrity sha1-n5VxD1CiZ5R7LMwSR0HBAoQn5xM=
