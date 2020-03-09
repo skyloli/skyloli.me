@@ -213,8 +213,8 @@ post_meta:
 # Post wordcount display settings
 # Dependencies: https://github.com/willin/hexo-wordcount
 post_wordcount:
-  item_text: true
-  wordcount: true
+  item_text: false
+  wordcount: false
   min2read: false
   totalcount: false
   separated_meta: false
