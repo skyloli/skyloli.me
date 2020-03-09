@@ -7,12 +7,49 @@ type: "about"
 
 ![](/images/about.jpg)
 
-人气网红 | 前端小萌新 | bilibili | 有猫 | 开源
+# APhage
+ - 教育：大专/广东省国防工业职工大学/计算机应用技术
+ - 博客：[https://aphage.me](https://aphage.me)
+ - Github：[https://github.com/aphage](https://github.com/aphage)
+ - 联系：isxiatian@gmail.com/254237301@qq.com
+ - 期望职位：JAVA程序员
 
-抓住我： [GitHub](https://github.com/DIYgod) | [Twitter](https://twitter.com/DIYgod) | [QQ 群](/images/qq-g.jpg) | [Telegram chanel](https://t.me/awesomeDIYgod) | [更多](https://www.anotherhome.net/3163)
+# 教育经历
+- 大专/广东省国防工业职工大学/计算机应用技术
+- 北大青鸟电脑计算机职业培训学校/ACCP
+- 中专/清新区职业技术学校/计算机应用
 
-&nbsp;
+# 工作经历
 
-博客建于2014年2月9日
+## 广州市粤商实业股份有限公司 （ 2019年4月 ~ 2019年9月 ）
+负责后端开发工作并协助同事解决BUG
 
-2017年11月20日从 WordPress 换到 Hexo，新的开始！
+## 广州稳捷信息科技有限公司 （ 2016年7月 ~ 2018年9月 ）
+负责前端后端开发，还有产品售后相关问题
+
+## 长城宽带（ 2013年7月 ~ 2014年8月 ）
+安装宽带，维护网络交换机，跳通光纤
+
+# 项目经验
+
+## 天天OA系统
+此系统是给集团公司协同办公内部使用，我负责考勤、管理员操作日志开发工作，发现并解决了考勤表设计缺陷(表结构不是我设计的)，使用的技术主要有JAVA、Spring Cloud、Mybatis Plus、Nacos、Redis、RabbitMQ、MySQL、Swagger2
+
+## 广东公安边防档案平台
+此项目是用作人员档案的管理，主要有档案查询、档案调阅、档案管理，我负责数据库表结构设计、项目基础搭建、使用的技术主要有JAVA、SpringBoot、Spring Data JPA、Apache Shiro、MySQL
+
+## 执法记录仪挂载SDK
+作用是识别不同品牌执法记录仪自动挂载，我负责的功能主要有密码验证、文件系统挂载、同步时间，使用的技术主要有C++、libusb win32
+
+## 音视频资料管理系统
+此系统是对警情案件的管理和音视频的管理，我负责系统用户管理、设备管理(执法记录仪、监控摄像头)、音视频的统计，使用的技术主要有JAVA、SpringMVC、MyBatis、VLC、MySQL
+
+# 证书
+全国计算机信息高新技术软件工程师/WEB 软件工程师
+
+# 技能
+- 编程语言：C/C++/JAVA/C#
+- Web框架：SpringMVC/SpringCloud/Struts2/Hibernate/MyBatis/MyBatis Plus/Shiro
+- 前端框架：Bootstrap/LayUI/Javascript/Jquery/Angular/
+- 数据库相关：MySQL/SQL Server/Oracle
+- 其他：socket编程/Boost Asio/Linux/Svn/Git/Maven/Docker
