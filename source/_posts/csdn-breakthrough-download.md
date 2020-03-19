@@ -1,9 +1,8 @@
 ---
 title: csdn 突破正版链接直接下载
 date: 2018-10-10 22:53:25
-tags: [JavaScript,csdn]
 categories:
-  - 编程
+  - 分享境
 ---
 ``` javascript
 //https://download.csdn.net/download/anonymous1991/10137472

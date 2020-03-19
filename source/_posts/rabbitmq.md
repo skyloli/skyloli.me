@@ -1,9 +1,8 @@
 ---
 title: RabbitMQ 入门教程
 date: 2019-5-1 22:53:25
-tags: [RabbitMQ,JAVA]
 categories:
-  - 编程
+  - 烫烫烫烫
 ---
 
 - [什么是MQ为什么使用MQ](#link1 )

@@ -1,9 +1,8 @@
 ---
 title: Linux 修改最大打开文件数量
 date: 2019-5-1 22:53:25
-tags: [Linux,CentOS7]
 categories:
-  - Linux
+  - 烫烫烫烫
 ---
 查看
 

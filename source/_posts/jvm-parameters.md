@@ -1,9 +1,8 @@
 ---
 title: JVM 参数设置
 date: 2019-05-20 14:30:46
-tags: [JAVA,JVM]
 categories:
-  - 编程
+  - 烫烫烫烫
 ---
 
 `JDK8-废弃永久代（PermGen）迎来元空间（Metaspace）`
