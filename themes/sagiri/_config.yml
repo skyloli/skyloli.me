@@ -344,11 +344,11 @@ han: false
 #baidu_analytics:
 
 # Duoshuo ShortName
-duoshuo_shortname: aphage-me
+duoshuo_shortname:
 
 # Disqus
 disqus:
-  enable: false
+  enable: true
   shortname: aphage-me
   count: true
   api:
