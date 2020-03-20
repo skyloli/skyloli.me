@@ -353,7 +353,7 @@ disqus:
   count: true
   api:
   apikey:
-  admin: Aphage
+  admin: aphage
   adminLabel: 萝莉
 
 # Hypercomments
