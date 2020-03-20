@@ -349,7 +349,7 @@ duoshuo_shortname:
 # Disqus
 disqus:
   enable: true
-  shortname: aphage-me
+  shortname: https-aphage-me
   count: true
   api:
   apikey:
