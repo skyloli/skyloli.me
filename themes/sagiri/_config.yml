@@ -350,7 +350,7 @@ han: false
 disqus:
   enable: true
   shortname: aphage-me
-  count: false
+  count: true
   api:
   apikey:
   admin: Aphage
