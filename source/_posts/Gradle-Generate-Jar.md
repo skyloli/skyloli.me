@@ -2,7 +2,7 @@
 title: Gradle 打包jar的几种方式
 date: 2019-5-1 22:53:25
 categories:
-  - 烫烫烫烫
+  - [java, gradle]
 ---
 ## jar任务
 

@@ -2,7 +2,7 @@
 title: Failed to start LSB
 date: 2019-5-1 22:53:25
 categories:
-  - 烫烫烫烫
+  - [linux, centos]
 ---
 不知道怎么了，网络突然不行了
 

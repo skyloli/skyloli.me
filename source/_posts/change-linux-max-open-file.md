@@ -2,7 +2,7 @@
 title: Linux 修改最大打开文件数量
 date: 2019-5-1 22:53:25
 categories:
-  - 烫烫烫烫
+  - [linux, centos]
 ---
 查看
 
@@ -15,8 +15,6 @@ ulimit -n
 ``` bash
 ulimit -n 65535
 ```
-
-<!--more-->
 
 永久修改
 
@@ -36,6 +34,8 @@ ulimit -n 65535
 ``` bash
 cat /proc/sys/fs/file-max
 ```
+
+<!--more-->
 
 临时修改系统最大打开文件数量直接修改上面的文件中的数字即可
 
