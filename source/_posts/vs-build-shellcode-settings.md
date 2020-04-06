@@ -5,7 +5,7 @@ categories:
   - [c/c++, shellcode]
   - [c/c++, visual studio]
 ---
-* 表示可选
+`* 表示可选`
 
 ``` config
 C/C++
