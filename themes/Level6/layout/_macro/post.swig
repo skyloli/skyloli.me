@@ -85,12 +85,15 @@
 		{% if is_index %}
 			{% if post.excerpt  %}
 			{{ post.excerpt }}
+			{% else %}
+			{{ post.content }}
+			{% endif %}
 			 <div class="post-button text-center">
 				<a class="btn scaleup" href="{{ url_for(post.path) }}{% if theme.scroll_to_more %}#{{ __('post.more') }}{% endif %}" rel="contents">
 				  {{ __('post.read_more') }} &raquo;
 				</a>
 			 </div>
-			{% endif %}
+			
 		{% else %}
 			{{ post.content }}
 		{% endif %}
