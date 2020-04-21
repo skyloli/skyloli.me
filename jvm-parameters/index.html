@@ -1,1 +1,633 @@
-<!DOCTYPE html><html class="theme-next pisces" lang="zh-Hans"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"><meta name="theme-color" content="#222"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link href="//fonts.loli.net/css?family=Sigmar One:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css"><link href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"><link href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css" rel="stylesheet" type="text/css"><link href="/css/main.css?v=0.0.35" rel="stylesheet" type="text/css"><link rel="apple-touch-icon" sizes="180x180" href="/images/phage.jpg?v=0.0.35"><link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=0.0.35"><link rel="mask-icon" href="/images/phage.jpg?v=0.0.35" color="#222"><meta name="keywords" content="aphage,blog"><link rel="alternate" href="/atom.xml" title="Hi, aphage" type="application/atom+xml"><meta name="description" content="JDK8-废弃永久代（PermGen）迎来元空间（Metaspace）移除永久代是为融合HotSpot JVM与 JRockit VM而做出的努力，因为JRockit没有永久代，不需要配置永久代。JVM内存为两块：PermanentSapce和HeapSpacePermanentSapce：存放代码的(字节码)HeapSpace：堆其中HeapSpace&#x3D; {Old + NEW {&#x3D; Eden ,"><meta property="og:type" content="article"><meta property="og:title" content="JVM 参数设置"><meta property="og:url" content="https://aphage.me/jvm-parameters/index.html"><meta property="og:site_name" content="Hi, aphage"><meta property="og:description" content="JDK8-废弃永久代（PermGen）迎来元空间（Metaspace）移除永久代是为融合HotSpot JVM与 JRockit VM而做出的努力，因为JRockit没有永久代，不需要配置永久代。JVM内存为两块：PermanentSapce和HeapSpacePermanentSapce：存放代码的(字节码)HeapSpace：堆其中HeapSpace&#x3D; {Old + NEW {&#x3D; Eden ,"><meta property="article:published_time" content="2019-05-20T14:30:46.000Z"><meta property="article:modified_time" content="2020-04-06T06:41:27.119Z"><meta property="article:author" content="aphage"><meta name="twitter:card" content="summary"><script type="text/javascript" id="hexo.configurations">var NexT=window.NexT||{},CONFIG={root:"/",scheme:"Pisces",version:"0.0.35",sidebar:{position:"right",display:"always",offset:52,b2t:!1,scrollpercent:!1,onmobile:!1},fancybox:!1,tabs:!0,motion:{enable:!1,async:!1,transition:{post_block:"fadeIn",post_header:"slideDownIn",post_body:"slideDownIn",coll_header:"slideLeftIn",sidebar:"slideUpIn"}},since:"2/9/2016 11:30:00",onlineAPI:"",site:{title:"Hi, aphage",subtitle:"",author:"aphage"},duoshuo:{userId:"0",author:"博主"},algolia:{applicationID:"",apiKey:"",indexName:"",hits:{per_page:10},labels:{input_placeholder:"Search for Posts",hits_empty:"We didn't find any results for the search: ${query}",hits_stats:"${hits} results found in ${time} ms"}},leancloud:{enable:!1,appID:"",appKey:""},favicon:{visibilitychange:!0,narmal:"/images/favicon.ico",hidden:"/images/failure.ico",show_text:"(/≧▽≦/)咦！又好了！",hide_text:"(●—●)喔哟，崩溃啦！"}}</script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/disqusjs@1.0.8/dist/disqus.js"></script><link rel="canonical" href="https://aphage.me/jvm-parameters/"><title>JVM 参数设置 | Hi, aphage</title><meta name="generator" content="Hexo 4.2.0"></head><body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans" class="theme-mai"><div class="container sidebar-position-right page-post-detail"><header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="header-inner"><nav class="site-nav"><ul id="menu" class="menu"><li class="menu-item menu-item-首页"><a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i><br>首页</a></li><li class="menu-item menu-item-归档"><a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i><br>归档</a></li><li class="menu-item menu-item-后宫"><a href="/friends/" rel="section"><i class="menu-item-icon fa fa-fw fa-mars"></i><br>后宫</a></li><li class="menu-item menu-item-留言板"><a href="/message/" rel="section"><i class="menu-item-icon fa fa-fw fa-pencil"></i><br>留言板</a></li><li class="menu-item search"><form class="search-form"><input name="keyword" type="text" class="search-input" placeholder="站内搜索"> <button type="submit" class="search-submit"><i class="fa fa-search"></i></button></form></li></ul></nav><div class="site-brand-wrapper"><div class="site-meta"><div class="custom-logo-site-title"><div class="brand"><span class="logo-line-before"><i></i></span><div class="site-title"><div id="animate" class="animate"><span>H</span><span>i</span><span>,</span><span> </span><span>a</span><span>p</span><span>h</span><span>a</span><span>g</span><span>e</span></div><div id="guide" class="guide"><span>H</span><span>i</span><span>,</span><span> </span><span>a</span><span>p</span><span>h</span><span>a</span><span>g</span><span>e</span></div></div><span class="logo-line-after"><i></i></span></div></div><p class="site-subtitle"></p></div><div class="site-nav-toggle"><button><span class="btn-bar"></span> <span class="btn-bar"></span> <span class="btn-bar"></span></button></div></div><div class="site-master" itemprop="author" itemscope itemtype="http://schema.org/Person"><img class="site-master-avatar" itemprop="image" src="/images/phage.png" alt="aphage"><h2 class="site-master-description" itemprop="description"><span>写代码是热爱，</span><span>写到世界充满爱！</span></h2></div></div></header><main id="main" class="main"><div class="main-inner"><div class="content-wrap"><div id="content" class="content"><div id="posts" class="posts-expand"><article class="post post-type-normal" itemscope itemtype="http://schema.org/Article"><div class="post-date"><div class="post-month">05月</div><div class="post-day">20</div></div><div class="post-badge"><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/java/" itemprop="url" rel="index"><span itemprop="name">java</span> </a></span><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/java/jvm/" itemprop="url" rel="index"><span itemprop="name">jvm</span></a></span></div><div class="post-block"><link itemprop="mainEntityOfPage" href="https://aphage.me/jvm-parameters/"><span hidden itemprop="author" itemscope itemtype="http://schema.org/Person"><meta itemprop="name" content="aphage"><meta itemprop="description" content=""><meta itemprop="image" content="/images/phage.png"></span><span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization"><meta itemprop="name" content="Hi, aphage"></span><header class="post-header"><h1 class="post-title" itemprop="name headline">JVM 参数设置</h1><div class="post-meta"><span class="post-time"><span class="post-meta-item-icon"><i class="fa fa-calendar-o"></i> </span><span class="post-meta-item-text">发表于</span> <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-20T14:30:46+00:00">2019-05-20</time> </span><span class="post-comments-count"><span class="post-meta-divider">•</span> <span class="post-meta-item-icon"><i class="fa fa-comment-o"></i> </span><a href="/jvm-parameters/#comments" itemprop="discussionUrl"><span class="post-comments-count disqus-comment-count" data-disqus-identifier="jvm-parameters/" itemprop="commentCount"></span></a></span></div></header><div class="post-body" itemprop="articleBody"><p><code>JDK8-废弃永久代（PermGen）迎来元空间（Metaspace）</code></p><p><code>移除永久代是为融合HotSpot JVM与 JRockit VM而做出的努力，因为JRockit没有永久代，不需要配置永久代。</code></p><p>JVM内存为两块：PermanentSapce和HeapSpace</p><p>PermanentSapce：存放代码的(字节码)</p><p>HeapSpace：堆</p><p>其中HeapSpace= {Old + NEW {= Eden , from, to } }</p><p>一般设置一下内存大小和回收策略就行了</p><hr><a id="more"></a><h2 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h2><p>-server：</p><p>一定要作为第一个参数，在多个 CPU 时性能佳，还有一种叫</p><p>-client:</p><p>的模式，特点是启动速度比较快，但运行时性能和内存管理效率不高，通常用于客户端应用程序或开发调试，在 32 位环境下直接运行 Java 程序默认启用该模式。Server 模式的特点是启动速度比较慢，但运行时性能和内存管理效率很高，适用于生产环境，在具有 64 位能力的 JDK 环境下默认启用该模式，可以不配置该参数。</p><p>-Xms：</p><p>表示 Java 初始化堆的大小，-Xms 与-Xmx 设成一样的值，避免 JVM 反复重新申请内存，导致性能大起大落，默认值为物理内存的 1/64，默认（MinHeapFreeRatio参数可以调整）空余堆内存小于 40% 时，JVM 就会增大堆直到 -Xmx 的最大限制。</p><p>-Xmx：</p><p>表示最大 Java 堆大小，当应用程序需要的内存超出堆的最大值时虚拟机就会提示内存溢出，并且导致应用服务崩溃，因此一般建议堆的最大值设置为可用内存的最大值的80%。如何知道我的 JVM 能够使用最大值，使用 java -Xmx512M -version 命令来进行测试，然后逐渐的增大 512 的值,如果执行正常就表示指定的内存大小可用，否则会打印错误信息，默认值为物理内存的 1/4，默认（MinHeapFreeRatio参数可以调整）空余堆内存大于 70% 时，JVM 会减少堆直到-Xms 的最小限制。</p><p>-Xss：</p><p>表示每个 Java 线程堆栈大小，JDK 5.0 以后每个线程堆栈大小为 1M，以前每个线程堆栈大小为 256K。根据应用的线程所需内存大小进行调整，在相同物理内存下，减小这个值能生成更多的线程，但是操作系统对一个进程内的线程数还是有限制的，不能无限生成，经验值在 3000~5000 左右。一般小的应用， 如果栈不是很深， 应该是128k 够用的，大的应用建议使用 256k 或 512K，一般不易设置超过 1M，要不然容易出现out ofmemory。这个选项对性能影响比较大，需要严格的测试。</p><p>-XX:NewSize：设置新生代内存大小。</p><p>-XX:MaxNewSize：设置最大新生代新生代内存大小</p><p><del>-XX:PermSize：设置持久代内存大小</del>JDK8 后被抛弃，使用-XX:MetaspaceSize替代，一般不需要调整</p><p><del>-XX:MaxPermSize：设置最大值持久代内存大小，永久代不属于堆内存，堆内存只包含新生代和老年代。</del>JDK8 后被抛弃，使用-XX:MaxMetaspaceSize替代,一般不需要调整</p><p><strong>-XX:MaxPermSize=size</strong></p><p>Sets the maximum permanent generation space size (in bytes). This option was deprecated in JDK 8, and superseded by the -XX:MaxMetaspaceSize option.</p><p><strong>-XX:PermSize=size</strong></p><p>Sets the space (in bytes) allocated to the permanent generation that triggers a garbage collection if it is exceeded. This option was deprecated un JDK 8, and superseded by the -XX:MetaspaceSize option.</p><p><strong>-XX:MaxMetaspaceSize=size</strong></p><p>Sets the maximum amount of native memory that can be allocated for class metadata. By default, the size is not limited. The amount of metadata for an application depends on the application itself, other running applications, and the amount of memory available on the system.</p><p>The following example shows how to set the maximum class metadata size to 256 MB:</p><p>-XX:MaxMetaspaceSize=256m</p><p><strong>-XX:MetaspaceSize=size</strong></p><p>Sets the size of the allocated class metadata space that will trigger a garbage collection the first time it is exceeded. This threshold for a garbage collection is increased or decreased depending on the amount of metadata used. The default size depends on the platform.</p><p>因为默认的类的元数据分配只受本地内存大小的限制，也就是说本地内存剩余多少，理论上Metaspace就可以有多大</p><p>-XX:+AggressiveOpts：</p><p>作用如其名（aggressive），启用这个参数，则每当 JDK 版本升级时，你的 JVM 都会使用最新加入的优化技术（如果有的话）。</p><p>-XX:+DisableExplicitGC：</p><p>禁用System.gc() ,在 程序代码中不允许有显示的调用“System.gc()”。每次在到操作结束时手动调用 System.gc() 一下，付出的代价就是系统响应时间严重降低，就和关于 Xms，Xmx 里的解释的原理一样，这样去调用 GC 导致系统的 JVM 大起大落。</p><p>-Xmn：</p><p>新生代的内存空间大小，可以替代-XX:NewSize,-XX:MaxNewSize<br>对-XX:newSize、-XX:MaxnewSize两个参数同时进行配置（注意：JDK1.4之后才有该参数）。</p><p>-Duser.timezone=Asia/Shanghai：</p><p>设置用户所在时区。</p><p>-XX:NewRatio：</p><p>年轻代（包括 Eden 和两个 Survivor 区）与年老代的比值（除去持久代），-XX:NewRatio=4 表示年轻代与年老代所占比值为 1:4，年轻代占整个堆栈的 1/5，Xms=Xmx 并且设置了 Xmn 的情况下，该参数不需要进行设置。</p><p>-XX:SurvivorRatio：</p><p>Eden 区与 Survivor 区的大小比值，设置为 8，表示 2 个 Survivor 区（JVM 堆内存年轻代中默认有 2 个大小相等的 Survivor 区）与 1 个 Eden 区的比值为 2:8，即 1 个 Survivor 区占整个年轻代大小的 1/10。</p><p>-XX:+UseConcMarkSweepGC：</p><p>设置年老代为并发收集，即 CMS gc，这一特性只有 jdk1.5<br>后续版本才具有的功能，它使用的是 gc 估算触发和 heap 占用触发。我们知道频频繁的 GC 会造面 JVM<br>的大起大落从而影响到系统的效率，因此使用了 CMS GC 后可以在 GC 次数增多的情况下，每次 GC 的响应时间却很短，比如说使用了 CMS<br>GC 后经过 jprofiler 的观察，GC 被触发次数非常多，而每次 GC 耗时仅为几毫秒。</p><p>-XX:+UseParNewGC：</p><p>对新生代采用多线程并行回收，这样收得快，注意最新的 JVM 版本，当使用 -XX:+UseConcMarkSweepGC 时，-XX:UseParNewGC 会自动开启。因此，如果年轻代的并行 GC 不想开启，可以通过设置 -XX：-UseParNewGC 来关掉。</p><p>资料</p><p><a href="https://docs.oracle.com/cd/E22289_01/html/821-1274/configuring-the-default-jvm-and-java-arguments.html" target="_blank" rel="noopener">Configuring the Default JVM and Java Arguments官方文档</a></p><p><a href="https://docs.oracle.com/javase/8/docs/technotes/tools/unix/java.html" target="_blank" rel="noopener">JVM 参数介绍官方文档</a></p><p><a href="https://blog.csdn.net/tree_ifconfig/article/details/81222196" target="_blank" rel="noopener">JVM中的-Xms -Xmx -XX:newSize -XX:MaxnewSize -Xmn -XX:PermSize -XX:MaxPermSize区别介绍</a></p><p><a href="https://blog.csdn.net/ljj_9/article/details/79145324" target="_blank" rel="noopener">生产环境的tomcat调优和jvm调化</a></p><p><a href="https://www.cnblogs.com/andy-zhou/p/5327288.html" target="_blank" rel="noopener">JVM调优总结，比较详细</a></p><p><a href="https://www.cnblogs.com/w-wfy/p/6415856.html" target="_blank" rel="noopener">java–jvm启动的参数</a></p><p><a href="https://www.cnblogs.com/sjxbg/p/9388615.html" target="_blank" rel="noopener">JVM垃圾回收机制与内存回收</a></p></div><div class="post-share">分享到：</div><footer class="post-footer"><div class="post-nav"><div class="post-nav-next post-nav-item"><a href="/Failed-to-start-LSB/" rel="next" title="Failed to start LSB"><i class="fa fa-chevron-left"></i> Failed to start LSB</a></div><span class="post-nav-divider"></span><div class="post-nav-prev post-nav-item"><a href="/September-9102-I-got-pneumonia/" rel="prev" title="9102年9月我得了肺炎">9102年9月我得了肺炎 <i class="fa fa-chevron-right"></i></a></div></div></footer></div></article><div class="post-spread"></div></div></div><div class="comments" id="comments"><div id="disqus_thread"><div id="dsqjs"><section class="dsqjs-info"><p id="dsqjs-load-disqus" class="dsqjs-message">评论完整模式加载中...如果长时间无法加载，请针对 disq.us | disquscdn.com | disqus.com 启用代理</p></section></div></div></div><script type="text/javascript">window.DISQUS=null,new DisqusJS({shortname:"https-aphage-me",siteName:"Hi, aphage",identifier:"jvm-parameters/",url:"https://aphage.me/jvm-parameters/",api:"",apikey:"",admin:"",adminLabel:""})</script></div><div class="sidebar-toggle"><div class="sidebar-toggle-line-wrap"><span class="sidebar-toggle-line sidebar-toggle-line-first"></span> <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span> <span class="sidebar-toggle-line sidebar-toggle-line-last"></span></div></div><aside id="sidebar" class="sidebar"><div class="sidebar-inner"><ul class="sidebar-nav motion-element"><li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">文章目录</li><li class="sidebar-nav-overview" data-target="site-overview-wrap">站点概览</li></ul><section class="site-overview-wrap sidebar-panel"><div class="site-overview"><div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person"><img class="site-author-image" itemprop="image" src="/images/yu_ban_mei_qin_9.jpg" alt="aphage"><p class="site-author-name" itemprop="name"><span style="opacity:.2">a</span>phage</p><p class="site-description motion-element" itemprop="description">你能抓到我么？</p></div><div class="links-of-author motion-element"><span class="links-of-author-item"><a href="https://github.com/aphage" target="_blank" title="GitHub" data-balloon="GitHub" data-balloon-pos="up"><i class="fa fa-fw fa-github"></i></a></span></div><div class="feed-link motion-element"><a class="feed-rss" href="/atom.xml" rel="alternate" target="_blank"><i class="fa fa-rss"></i> <span>RSS 订阅</span></a></div><nav class="site-state motion-element"><div class="site-state-item site-state-posts"><a href="/archives"><span class="site-state-item-count">11</span> <span class="site-state-item-name">日志</span></a></div><div class="site-state-item site-state-categories"><a href="/categories/index.html"><span class="site-state-item-count">15</span> <span class="site-state-item-name">分类</span></a></div></nav><div class="cc-license motion-element" itemprop="license"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" target="_blank"><img src="/images/cc-by-nc-sa.png" alt="Creative Commons"></a></div></div></section><section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active"><div class="post-toc"><div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#参数"><span class="nav-number">1.</span> <span class="nav-text">参数</span></a></li></ol></div></div></section></div></aside></div></main><footer id="footer" class="footer"><div class="footer-image"></div><div class="footer-inner"><p>博客已萌萌哒运行<span id="since"></span><span class="my-face">(●'◡'●)ﾉ♥</span></p><p>托管于<a href="https://github.com/" target="_blank" rel="nofollow"> GitHub</a>. <a href="https://dash.cloudflare.com" target="_blank" rel="nofollow">cloudflare </a>提供 CDN 解析服务.</p><p>© <span itemprop="copyrightYear">2020</span> Hi, aphage. 由 <a href="https://hexo.io/" target="_blank" class="external" rel="nofollow">Hexo</a> 强力驱动. Theme By <a href="https://github.com/DIYgod/hexo-theme-sagiri" target="_blank" class="external" rel="nofollow">Sagiri</a> v0.0.35. <a href="/sitemap.xml" target="_blank">站点地图</a>. .</p><p>Made with <i class="fa fa-heart throb" style="color:#d43f57"></i> by <span class="author" itemprop="copyrightHolder">aphage</span>.</p></div></footer><div class="back-to-top"><i class="fa fa-arrow-up"></i></div><canvas id="evanyou"></canvas><div id="aplayer-fixed"></div></div><script type="text/javascript" src="/js/sagiri.min.js?v=0.0.35"></script><script>var serviceWorkerUri="/sw.js";"serviceWorker"in navigator?navigator.serviceWorker.register(serviceWorkerUri).then(function(){navigator.serviceWorker.controller?console.log("Assets cached by the controlling service worker."):console.log("Please reload this page to allow the service worker to handle network operations.")}).catch(function(e){console.log("ERROR: "+e)}):console.log("Service workers are not supported in the current browser.")</script></body></html>
+<!DOCTYPE html>
+<html>
+<head lang="zh-Hans">
+	<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+  <meta name="keywords" content="aphage,blog" />
+
+
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/moon.png?v=5.02">
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: '',
+    version: '5.02',
+    sidebar: {"display":true},
+    motion: "",
+    since: '2/9/2016 11:30:00',
+    online: JSON.parse('{"users":null,"music":"https://api.i-meto.com/meting/api?server=netease&type=playlist&id=399704763"}'),
+    site: {
+      title: 'Hi, aphage',
+      subtitle: '',
+      author: 'aphage'
+    },
+    favicon: {
+      visibilitychange: true,
+      narmal: '/images/moon.png',
+      hidden: '/images/sleep.png',
+      show_text: '(/≧▽≦/)咦！又好了！',
+      hide_text: '(●—●)喔哟，崩溃啦！'
+    }
+  };
+</script>
+
+<link href="/css/main.css?v=5.02" rel="stylesheet" type="text/css" />
+
+    <title>JVM 参数设置 | Hi, aphage</title>
+	<script type="text/javascript" src=https://cdn.jsdelivr.net/npm/disqusjs@1.2.2/dist/disqus.js></script>
+	<script type="text/javascript" src=https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js></script>
+</head>
+
+<body>
+
+	<div class="container">
+		<header id="header">
+			<div class="header-inner">
+				<nav class="site-nav">
+					
+					<ul id="menu" class="menu">
+						
+							
+							<li class="menu-item menu-item-首页">
+								<a href="/" rel="section">
+								
+								  <i class="menu-item-icon fas fa-meteor"></i> <br />
+								
+								首页
+								</a>
+								
+							</li>
+						
+							
+							<li class="menu-item menu-item-实验室">
+								<a href="javascript:;" rel="section">
+								
+								  <i class="menu-item-icon fas fa-magic"></i> <br />
+								
+								实验室
+								</a>
+								
+								<ul class="submenu submenu-实验室">
+								  
+									
+									<li class="submenu-item submenu-item-shion">
+									  <a href="https://github.com/aphage/Shion" rel="section" target="_blank">
+										Shion
+									  </a>
+									</li>
+								  
+									
+									<li class="submenu-item submenu-item-aqua">
+									  <a href="https://github.com/aphage/Aqua" rel="section" target="_blank">
+										Aqua
+									  </a>
+									</li>
+								  
+								</ul>
+							  
+							</li>
+						
+							
+							<li class="menu-item menu-item-归档">
+								<a href="/archives/" rel="section">
+								
+								  <i class="menu-item-icon fas fa-archive"></i> <br />
+								
+								归档
+								</a>
+								
+							</li>
+						
+							
+							<li class="menu-item menu-item-后宫">
+								<a href="/friends/" rel="section">
+								
+								  <i class="menu-item-icon fas fa-mars-stroke"></i> <br />
+								
+								后宫
+								</a>
+								
+							</li>
+						
+							
+							<li class="menu-item menu-item-关于我">
+								<a href="/about/" rel="section">
+								
+								  <i class="menu-item-icon fas fa-heartbeat"></i> <br />
+								
+								关于我
+								</a>
+								
+							</li>
+						
+						
+						
+						<li class="menu-item search">
+						  <form class="search-form">
+							<input name="keyword" type="text" class="search-input" placeholder="站内搜索">
+							<button type="submit" class="search-submit"><i class="fas fa-search"></i></button>
+						  </form>
+						</li>
+						
+						
+					</ul>
+					
+				</nav>
+				<div class="site-brand-wrapper">
+					<div class="site-meta">
+						<div class="custom-logo-site-title">
+							<div class="brand">
+								<span class="logo-line-before"><i></i></span>
+								<div class="site-title">
+									<div id="animate-stroke" class="animate">
+									<span>
+										  <svg>
+											<use xlink:href="#strokeH"></use>
+										  </svg>
+										</span><span>
+										  <svg>
+											<use xlink:href="#strokei"></use>
+										  </svg>
+										</span><span>
+										  <svg>
+											<use xlink:href="#stroke,"></use>
+										  </svg>
+										</span><span>
+										  <svg>
+											<use xlink:href="#stroke "></use>
+										  </svg>
+										</span><span>
+										  <svg>
+											<use xlink:href="#strokea"></use>
+										  </svg>
+										</span><span>
+										  <svg>
+											<use xlink:href="#strokep"></use>
+										  </svg>
+										</span><span>
+										  <svg>
+											<use xlink:href="#strokeh"></use>
+										  </svg>
+										</span><span>
+										  <svg>
+											<use xlink:href="#strokea"></use>
+										  </svg>
+										</span><span>
+										  <svg>
+											<use xlink:href="#strokeg"></use>
+										  </svg>
+										</span><span>
+										  <svg>
+											<use xlink:href="#strokee"></use>
+										  </svg>
+										</span>
+									</div>
+									<div id="animate" class="animate">
+									<span>
+										  <svg>
+											<text id="strokeH">H</text>
+										  </svg>
+										</span><span>
+										  <svg>
+											<text id="strokei">i</text>
+										  </svg>
+										</span><span>
+										  <svg>
+											<text id="stroke,">,</text>
+										  </svg>
+										</span><span>
+										  <svg>
+											<text id="stroke "> </text>
+										  </svg>
+										</span><span>
+										  <svg>
+											<text id="strokea">a</text>
+										  </svg>
+										</span><span>
+										  <svg>
+											<text id="strokep">p</text>
+										  </svg>
+										</span><span>
+										  <svg>
+											<text id="strokeh">h</text>
+										  </svg>
+										</span><span>
+										  <svg>
+											<text id="strokea">a</text>
+										  </svg>
+										</span><span>
+										  <svg>
+											<text id="strokeg">g</text>
+										  </svg>
+										</span><span>
+										  <svg>
+											<text id="strokee">e</text>
+										  </svg>
+										</span>
+								  </div>
+								  <div id="guide" class="guide">
+									<span>H</span><span>i</span><span>,</span><span> </span><span>a</span><span>p</span><span>h</span><span>a</span><span>g</span><span>e</span>
+								  </div>
+								</div>
+								 <span class="logo-line-after"><i></i></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="site-master" itemprop="author" itemscope itemtype="http://schema.org/Person">
+					<img class="site-master-avatar scaleup" itemprop="image" src="/images/aphage.png" alt="aphage" />
+					<h2 class="site-master-description scaleup" itemprop="description">
+						不要停下来啊
+					</h2>
+				</div>
+			</div>
+		</header>
+	
+		<main id="main" class="main">
+			<div class="main-inner">
+				<div class="content-wrap">
+				  <div id="content" class="content">
+					
+
+  <div id="posts" class="posts-expand">
+    
+	
+	<article class="post" itemscope itemtype="http://schema.org/Article">
+	
+	
+	
+	<div class="post-date">
+		<div class="post-month">05月</div>
+		<div class="post-day">20</div>
+	</div>
+	
+	
+	
+	<div class="post-badge">
+	
+	  <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+		<a href="/categories/java/" itemprop="url" rel="index">
+		  <span itemprop="name">java</span>
+		</a>
+	  </span>
+	
+	  <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+		<a href="/categories/java/jvm/" itemprop="url" rel="index">
+		  <span itemprop="name">jvm</span>
+		</a>
+	  </span>
+	
+	</div>
+	
+	
+	<div class="post-block">
+		<link itemprop="mainEntityOfPage" href="https://aphage.me/jvm-parameters/">
+		<span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+		  <meta itemprop="name" content="aphage">
+		  <meta itemprop="description" content="不要停下来啊">
+		  <meta itemprop="image" content="/images/aphage.png">
+		</span>
+		
+		<span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+		  <meta itemprop="name" content="Hi, aphage">
+		</span>
+		<header class="post-header">
+			
+			<h1 class="post-title" itemprop="name headline">
+            
+				JVM 参数设置
+			
+			</h1>
+			
+			
+			<div class="post-meta">
+			  <span class="post-time">
+				
+				  <span class="post-meta-item-icon">
+					<i class="far fa-calendar"></i>
+				  </span>
+				  
+					<span class="post-meta-item-text">发表于</span>
+				  
+				  <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-20T14:30:46+00:00">2019-05-20</time>
+				
+
+				
+
+				
+			  </span>
+			</div>
+		</header>
+		
+		
+		
+		
+		
+		<div class="post-body" itemprop="articleBody">
+		
+			<p><code>JDK8-废弃永久代（PermGen）迎来元空间（Metaspace）</code></p>
+<p><code>移除永久代是为融合HotSpot JVM与 JRockit VM而做出的努力，因为JRockit没有永久代，不需要配置永久代。</code></p>
+<p>JVM内存为两块：PermanentSapce和HeapSpace</p>
+<p>PermanentSapce：存放代码的(字节码)</p>
+<p>HeapSpace：堆</p>
+<p>其中HeapSpace= {Old + NEW {= Eden , from, to } }</p>
+<p>一般设置一下内存大小和回收策略就行了</p>
+<hr>
+<a id="more"></a>
+
+<h2 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h2><p>-server：</p>
+<p>一定要作为第一个参数，在多个 CPU 时性能佳，还有一种叫</p>
+<p>-client: </p>
+<p>的模式，特点是启动速度比较快，但运行时性能和内存管理效率不高，通常用于客户端应用程序或开发调试，在 32 位环境下直接运行 Java 程序默认启用该模式。Server 模式的特点是启动速度比较慢，但运行时性能和内存管理效率很高，适用于生产环境，在具有 64 位能力的 JDK 环境下默认启用该模式，可以不配置该参数。</p>
+<p>-Xms：</p>
+<p>表示 Java 初始化堆的大小，-Xms 与-Xmx 设成一样的值，避免 JVM 反复重新申请内存，导致性能大起大落，默认值为物理内存的 1/64，默认（MinHeapFreeRatio参数可以调整）空余堆内存小于 40% 时，JVM 就会增大堆直到 -Xmx 的最大限制。</p>
+<p>-Xmx：</p>
+<p>表示最大 Java 堆大小，当应用程序需要的内存超出堆的最大值时虚拟机就会提示内存溢出，并且导致应用服务崩溃，因此一般建议堆的最大值设置为可用内存的最大值的80%。如何知道我的 JVM 能够使用最大值，使用 java -Xmx512M -version 命令来进行测试，然后逐渐的增大 512 的值,如果执行正常就表示指定的内存大小可用，否则会打印错误信息，默认值为物理内存的 1/4，默认（MinHeapFreeRatio参数可以调整）空余堆内存大于 70% 时，JVM 会减少堆直到-Xms 的最小限制。</p>
+<p>-Xss：</p>
+<p>表示每个 Java 线程堆栈大小，JDK 5.0 以后每个线程堆栈大小为 1M，以前每个线程堆栈大小为 256K。根据应用的线程所需内存大小进行调整，在相同物理内存下，减小这个值能生成更多的线程，但是操作系统对一个进程内的线程数还是有限制的，不能无限生成，经验值在 3000~5000 左右。一般小的应用， 如果栈不是很深， 应该是128k 够用的，大的应用建议使用 256k 或 512K，一般不易设置超过 1M，要不然容易出现out ofmemory。这个选项对性能影响比较大，需要严格的测试。</p>
+<p>-XX:NewSize：设置新生代内存大小。</p>
+<p>-XX:MaxNewSize：设置最大新生代新生代内存大小</p>
+<p><del>-XX:PermSize：设置持久代内存大小</del>JDK8 后被抛弃，使用-XX:MetaspaceSize替代，一般不需要调整</p>
+<p><del>-XX:MaxPermSize：设置最大值持久代内存大小，永久代不属于堆内存，堆内存只包含新生代和老年代。</del>JDK8 后被抛弃，使用-XX:MaxMetaspaceSize替代,一般不需要调整</p>
+<p><strong>-XX:MaxPermSize=size</strong></p>
+<p>Sets the maximum permanent generation space size (in bytes). This option was deprecated in JDK 8, and superseded by the -XX:MaxMetaspaceSize option.</p>
+<p><strong>-XX:PermSize=size</strong></p>
+<p>Sets the space (in bytes) allocated to the permanent generation that triggers a garbage collection if it is exceeded. This option was deprecated un JDK 8, and superseded by the -XX:MetaspaceSize option.</p>
+<p><strong>-XX:MaxMetaspaceSize=size</strong></p>
+<p>Sets the maximum amount of native memory that can be allocated for class metadata. By default, the size is not limited. The amount of metadata for an application depends on the application itself, other running applications, and the amount of memory available on the system.</p>
+<p>The following example shows how to set the maximum class metadata size to 256 MB:</p>
+<p>-XX:MaxMetaspaceSize=256m</p>
+<p><strong>-XX:MetaspaceSize=size</strong></p>
+<p>Sets the size of the allocated class metadata space that will trigger a garbage collection the first time it is exceeded. This threshold for a garbage collection is increased or decreased depending on the amount of metadata used. The default size depends on the platform.</p>
+<p>因为默认的类的元数据分配只受本地内存大小的限制，也就是说本地内存剩余多少，理论上Metaspace就可以有多大</p>
+<p>-XX:+AggressiveOpts：</p>
+<p>作用如其名（aggressive），启用这个参数，则每当 JDK 版本升级时，你的 JVM 都会使用最新加入的优化技术（如果有的话）。</p>
+<p>-XX:+DisableExplicitGC：</p>
+<p>禁用System.gc() ,在 程序代码中不允许有显示的调用“System.gc()”。每次在到操作结束时手动调用 System.gc() 一下，付出的代价就是系统响应时间严重降低，就和关于 Xms，Xmx 里的解释的原理一样，这样去调用 GC 导致系统的 JVM 大起大落。</p>
+<p>-Xmn：</p>
+<p>新生代的内存空间大小，可以替代-XX:NewSize,-XX:MaxNewSize<br>对-XX:newSize、-XX:MaxnewSize两个参数同时进行配置（注意：JDK1.4之后才有该参数）。</p>
+<p>-Duser.timezone=Asia/Shanghai：</p>
+<p>设置用户所在时区。</p>
+<p>-XX:NewRatio：</p>
+<p>年轻代（包括 Eden 和两个 Survivor 区）与年老代的比值（除去持久代），-XX:NewRatio=4 表示年轻代与年老代所占比值为 1:4，年轻代占整个堆栈的 1/5，Xms=Xmx 并且设置了 Xmn 的情况下，该参数不需要进行设置。</p>
+<p>-XX:SurvivorRatio：</p>
+<p>Eden 区与 Survivor 区的大小比值，设置为 8，表示 2 个 Survivor 区（JVM 堆内存年轻代中默认有 2 个大小相等的 Survivor 区）与 1 个 Eden 区的比值为 2:8，即 1 个 Survivor 区占整个年轻代大小的 1/10。</p>
+<p>-XX:+UseConcMarkSweepGC：</p>
+<p>设置年老代为并发收集，即 CMS gc，这一特性只有 jdk1.5<br>后续版本才具有的功能，它使用的是 gc 估算触发和 heap 占用触发。我们知道频频繁的 GC 会造面 JVM<br>的大起大落从而影响到系统的效率，因此使用了 CMS GC 后可以在 GC 次数增多的情况下，每次 GC 的响应时间却很短，比如说使用了 CMS<br>GC 后经过 jprofiler 的观察，GC 被触发次数非常多，而每次 GC 耗时仅为几毫秒。</p>
+<p>-XX:+UseParNewGC：</p>
+<p>对新生代采用多线程并行回收，这样收得快，注意最新的 JVM 版本，当使用 -XX:+UseConcMarkSweepGC 时，-XX:UseParNewGC 会自动开启。因此，如果年轻代的并行 GC 不想开启，可以通过设置 -XX：-UseParNewGC 来关掉。</p>
+<p>资料</p>
+<p><a href="https://docs.oracle.com/cd/E22289_01/html/821-1274/configuring-the-default-jvm-and-java-arguments.html" target="_blank" rel="noopener">Configuring the Default JVM and Java Arguments官方文档</a></p>
+<p><a href="https://docs.oracle.com/javase/8/docs/technotes/tools/unix/java.html" target="_blank" rel="noopener">JVM 参数介绍官方文档</a></p>
+<p><a href="https://blog.csdn.net/tree_ifconfig/article/details/81222196" target="_blank" rel="noopener">JVM中的-Xms -Xmx -XX:newSize -XX:MaxnewSize -Xmn -XX:PermSize -XX:MaxPermSize区别介绍</a></p>
+<p><a href="https://blog.csdn.net/ljj_9/article/details/79145324" target="_blank" rel="noopener">生产环境的tomcat调优和jvm调化</a></p>
+<p><a href="https://www.cnblogs.com/andy-zhou/p/5327288.html" target="_blank" rel="noopener">JVM调优总结，比较详细</a></p>
+<p><a href="https://www.cnblogs.com/w-wfy/p/6415856.html" target="_blank" rel="noopener">java–jvm启动的参数</a></p>
+<p><a href="https://www.cnblogs.com/sjxbg/p/9388615.html" target="_blank" rel="noopener">JVM垃圾回收机制与内存回收</a></p>
+
+		
+		</div>
+		
+		
+		
+		
+		
+		  <div class="post-share">分享到：</div>
+		  
+		  
+			
+		  <footer class="post-footer">
+				
+				
+				
+				<div class="post-nav">
+				  <div class="post-nav-next post-nav-item">
+					
+					  <a href="/Failed-to-start-LSB/" rel="next" title="Failed to start LSB">
+						<i class="fas fa-angle-left"></i> Failed to start LSB
+					  </a>
+					
+				  </div>
+
+				  <span class="post-nav-divider"></span>
+
+				  <div class="post-nav-prev post-nav-item">
+					
+					  <a href="/September-9102-I-got-pneumonia/" rel="prev" title="9102年9月我得了肺炎">
+						9102年9月我得了肺炎 <i class="fas fa-angle-right"></i>
+					  </a>
+					
+				  </div>
+				</div>
+			  
+		  </footer>
+		
+		
+	</div>
+	
+	
+	
+	</article>
+
+  </div>
+
+
+				  </div>
+				  
+	
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <div id="dsqjs">
+          <section class="dsqjs-info">
+            <p id="dsqjs-load-disqus" class="dsqjs-message">��������ģʽ������...�����ʱ���޷����أ������ disq.us | disquscdn.com | disqus.com ���ô���</p>
+          </section>
+        </div>
+      </div>
+    </div>
+	<script type="text/javascript">
+        window.DISQUS = null;
+        new DisqusJS({
+          shortname: 'https-aphage-me',
+          siteName: 'Hi, aphage',
+          identifier: 'jvm-parameters/',
+          url: 'https://aphage.me/jvm-parameters/',
+          api: '',
+          apikey: '',
+          admin: '',
+          adminLabel: '',
+        });
+    </script>
+	
+
+
+				</div>
+				
+				  
+  
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            关于我
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/card.jpg"
+                alt="aphage" />
+            
+              <p class="site-author-name" itemprop="name"><span style="opacity:.2;">盯</span>aphage</p>
+              <p class="site-description motion-element" itemprop="description">快来抓我啊？</p>
+          </div>
+
+          <div class="links-of-author motion-element">
+            
+              
+                <span class="links-of-author-item scaleup">
+                  <a href="https://twitter.com/diyphage" target="_blank" title="Twitter">
+                    
+                       <i class="fab fa-twitter" style="color: #2FB0EC"><span>DIYgod</span></i></a>
+                </span>
+              
+                <span class="links-of-author-item scaleup">
+                  <a href="https://github.com/aphage" target="_blank" title="GitHub">
+                    
+                       <i class="fab fa-github" style="color: #191717"><span>DIYgod</span></i></a>
+                </span>
+              
+            
+          </div>
+
+          <div class="des-of-author">
+              <div class="des-of-author-nav">
+                
+                  
+                    <div class="des-of-author-title active" data-index="1">最喜欢的作品</div>
+                  
+                
+                  
+                    <div class="des-of-author-title" data-index="2">最喜欢的女孩子</div>
+                  
+                
+                  
+                    <div class="des-of-author-title" data-index="3">工作</div>
+                  
+                
+              </div>
+              <div class="des-of-author-panel">
+                
+                  
+                    <div class="des-of-author-des active" data-index="1">某科学的超电磁炮、钢之炼金术师、刀剑神域、OVERLORD、因为太怕痛就全点防御力了、关于我转生变成史莱姆这档事、欢迎来到实力至上主义的教室、Re：从零开始的异世界生活</div>
+                  
+                
+                  
+                    <div class="des-of-author-des" data-index="2">御坂美琴</div>
+                  
+                
+                  
+                    <div class="des-of-author-des" data-index="3">失业</div>
+                  
+                
+              </div>
+          </div>
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#参数"><span class="nav-number">1.</span> <span class="nav-text">参数</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+				
+			  </div>
+		</main>
+		
+		<footer id="footer" class="footer">
+			<div class="footer-image"></div>
+			<div class="footer-inner">
+				<p>博客已萌萌哒运行<span id="since"></span><span class="my-face">(●'◡'●)ﾉ♥</span></p>
+<p>托管于<a href="https://github.com/" target="_blank" rel="nofollow"> GitHub</a>. <a href="https://dash.cloudflare.com" target="_blank" rel="nofollow">cloudflare </a>提供 CDN 解析服务.</p>
+
+<p>
+	© <span itemprop="copyrightYear">2020</span> Hi, aphage.
+    
+		由 <a href="https://hexo.io/" target="_blank" class="external" rel="nofollow">Hexo</a> 强力驱动.
+	
+	
+    Theme By <a href="https://github.com/aphage" target="_blank" class="external" rel="nofollow">Level6</a> v5.02.
+	
+    <a href="/sitemap.xml" target="_blank">站点地图</a>.
+    .
+</p>
+<p>
+	Made with <i class="fas fa-heart throb" style="color: #d43f57;"></i>
+	by <span class="author" itemprop="copyrightHolder">aphage</span>.
+</p>
+
+			</div>
+		</footer>
+	</div>
+	
+	<div id="aplayer-fixed"></div>
+	
+	<script type="text/javascript" src="/js/Level6.min.js?v=5.02"></script>
+	<script>
+    var serviceWorkerUri = '/js/sw.js';
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register(serviceWorkerUri).then(function() {
+          if (navigator.serviceWorker.controller) {
+            console.log('Assets cached by the controlling service worker.');
+          } else {
+            console.log('Please reload this page to allow the service worker to handle network operations.');
+          }
+        }).catch(function(error) {
+          console.log('ERROR: ' + error);
+        });
+    } else {
+        console.log('Service workers are not supported in the current browser.');
+    }
+  </script>
+
+</body>
+</html>
