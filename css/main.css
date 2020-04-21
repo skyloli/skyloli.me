@@ -999,7 +999,7 @@ template {
 .sidebar .sidebar-inner .site-overview .des-of-author .des-of-author-nav .des-of-author-title.active:after {
   content: "→";
 }
-.sidebar .sidebar-inner .site-overview .des-of-author .des-of-author-nav.active {
+.sidebar .sidebar-inner .site-overview .des-of-author .des-of-author-nav .des-of-author-title.active {
   color: #97dffd;
 }
 .sidebar .sidebar-inner .site-overview .des-of-author .des-of-author-panel {
