@@ -1,0 +1,102 @@
+{% macro render(is_post) %}
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      {% set display_toc = is_post and theme.toc.enable or is_page and theme.toc.enable %}
+
+      {% if display_toc and toc(page.content).length > 1 %}
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            {{ __('sidebar.toc') }}
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            {{ __('sidebar.overview') }}
+          </li>
+        </ul>
+      {% endif %}
+
+      <section class="site-overview-wrap sidebar-panel{% if not display_toc or toc(page.content).length <= 1 %} sidebar-panel-active{% endif %}">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            {% if theme.avatar %}
+              <img class="site-author-image" itemprop="image"
+                src="{{ url_for( theme.card.avatar | default('/images/card.jpg') ) }}"
+                alt="{{ theme.author }}" />
+            {% endif %}
+              <p class="site-author-name" itemprop="name">{{ theme.card.name }}</p>
+              <p class="site-description motion-element" itemprop="description">{#
+            #}{% if theme.seo %}{#
+              #}{{ theme.signature }}{#
+            #}{% else %}{#
+              #}{{ theme.card.description }}{#
+            #}{% endif %}{#
+            #}</p>
+          </div>
+
+          <div class="links-of-author motion-element">
+            {% if theme.social %}
+              {% for name, link in theme.social %}
+                <span class="links-of-author-item scaleup">
+                  <a href="{{ trim(link.split('||')[0]) }}" target="_blank" title="{{ name }}">
+                    {% if theme.social_icons.enable %}
+                      {{ link.split('||')[1] }}{#
+                  #}{% endif %}{#
+                    #}{% if not theme.social_icons.icons_only %}{#
+                      #}{{ name }}{#
+                    #}{% endif %}{#
+                #}</a>
+                </span>
+              {% endfor %}
+            {% endif %}
+          </div>
+
+          <div class="des-of-author">
+              <div class="des-of-author-nav">
+                {% for title, des in theme.card.items %}
+                  {% if loop.index === 1 %}
+                    <div class="des-of-author-title active" data-index="{{ loop.index }}">{{ title }}</div>
+                  {% else %}
+                    <div class="des-of-author-title" data-index="{{ loop.index }}">{{ title }}</div>
+                  {% endif %}
+                {% endfor %}
+              </div>
+              <div class="des-of-author-panel">
+                {% for title, des in theme.card.items %}
+                  {% if loop.index === 1 %}
+                    <div class="des-of-author-des active" data-index="{{ loop.index }}">{{ des }}</div>
+                  {% else %}
+                    <div class="des-of-author-des" data-index="{{ loop.index }}">{{ des }}</div>
+                  {% endif %}
+                {% endfor %}
+              </div>
+          </div>
+
+        </div>
+      </section>
+
+      {% if display_toc and toc(page.content).length > 1 %}
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            {% if page.toc_number === undefined %}
+              {% set toc = toc(page.content, { "class": "nav", list_number: theme.toc.number }) %}
+            {% else %}
+              {% set toc = toc(page.content, { "class": "nav", list_number: page.toc_number }) %}
+            {% endif %}
+
+            {% if toc.length <= 1 %}
+              <p class="post-toc-empty">{{ __('post.toc_empty') }}</p>
+            {% else %}
+              <div class="post-toc-content">{{ toc }}</div>
+            {% endif %}
+
+          </div>
+        </section>
+      <!--/noindex-->
+      {% endif %}
+
+    </div>
+  </aside>
+{% endmacro %}

@@ -1,0 +1,26 @@
+{
+  "name": "hexo-theme-level6",
+  "version": "5.0.2",
+  "description": "Misaka能达到上天的意志 LEVEL6吗",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "keywords": [
+    "level6"
+  ],
+  "author": "misaka mikoto (aphage)",
+  "license": "MIT",
+  "devDependencies": {
+    "css-loader": "^3.5.2",
+    "style-loader": "^1.1.4",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  },
+  "dependencies": {
+    "aplayer": "^1.10.1",
+    "gsap": "^3.2.6",
+    "jquery": "^3.5.0"
+  }
+}

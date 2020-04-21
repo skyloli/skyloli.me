@@ -6,10 +6,10 @@ install:
   - npm install  #安装hexo及插件
 
 before_script:
-  - cd themes/sagiri
+  - cd themes/Level6
   - npm install
+  - npm run build
   - cd ../..
-
 script:
   - hexo cl  #清除
   - hexo g  #生成
