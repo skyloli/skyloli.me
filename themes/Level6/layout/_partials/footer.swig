@@ -9,8 +9,10 @@
 	{% if theme.footer['theme'] %}
     Theme By <a href="https://github.com/aphage" target="_blank" class="external" rel="nofollow">Level6</a> v{{ theme.version }}.
 	{% endif %}
+	{% if theme.footer['sitemap'] %}
     <a href="{{ url_for(theme.footer.sitemap) }}" target="_blank">站点地图</a>.
-    {% if theme.footer['theme'] %}
+	{% endif %}
+    {% if theme.footer['beian'] %}
 	{{ theme.footer.beian }}.
 	{% endif %}
 </p>
