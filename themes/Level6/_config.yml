@@ -44,7 +44,7 @@ toc:
   # Automatically add list number to toc.
   number: true
 card:
-  avatar: card.jpg
+  avatar: /images/card.jpg
   name: <span style="opacity:.2;">盯</span>aphage
   description: 快来抓我啊？
   items:
