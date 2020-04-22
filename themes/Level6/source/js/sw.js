@@ -10,60 +10,60 @@
     self.toolbox.options.debug = false;
     self.toolbox.options.networkTimeoutSeconds = 3;
 
-    self.toolbox.router.get("/images/(.*)", self.toolbox.fastest, {
+    self.toolbox.router.get("/images/(.*)", self.toolbox.cacheFirst, {
         cache: {
             name: staticImageCacheName,
             maxEntries: maxEntries
         }
     });
 
-    self.toolbox.router.get('/js/(.*)', self.toolbox.fastest, {
+    self.toolbox.router.get('/js/(.*)', self.toolbox.cacheFirst, {
         cache: {
             name: staticAssetsCacheName,
             maxEntries: maxEntries
         }
     });
-    self.toolbox.router.get('/css/(.*)', self.toolbox.fastest, {
+    self.toolbox.router.get('/css/(.*)', self.toolbox.cacheFirst, {
         cache: {
             name: staticAssetsCacheName,
             maxEntries: maxEntries
         }
     });
-    self.toolbox.router.get('/fonts/(.*)', self.toolbox.fastest, {
+    self.toolbox.router.get('/fonts/(.*)', self.toolbox.cacheFirst, {
         cache: {
             name: staticAssetsCacheName,
             maxEntries: maxEntries
         }
     });
-    self.toolbox.router.get("(.*)/images/(.*)", self.toolbox.fastest, {
+    self.toolbox.router.get("(.*)/images/(.*)", self.toolbox.cacheFirst, {
         origin: /cdn\.jsdelivr\.net/,
         cache: {
             name: staticImageCacheName,
             maxEntries: maxEntries
         }
     });
-    self.toolbox.router.get("/(.*)", self.toolbox.fastest, {
+    self.toolbox.router.get("/(.*)", self.toolbox.cacheFirst, {
         origin: /cdn\.jsdelivr\.net/,
         cache: {
             name: staticAssetsCacheName,
             maxEntries: maxEntries
         }
     });
-    self.toolbox.router.get("/(.*)", self.toolbox.fastest, {
+    self.toolbox.router.get("/(.*)", self.toolbox.cacheFirst, {
         origin: /cdnjs\.loli\.net/,
         cache: {
             name: staticAssetsCacheName,
             maxEntries: maxEntries
         }
     });
-    self.toolbox.router.get("/(.*)", self.toolbox.fastest, {
+    self.toolbox.router.get("/(.*)", self.toolbox.cacheFirst, {
         origin: /gstatic\.loli\.net/,
         cache: {
             name: staticAssetsCacheName,
             maxEntries: maxEntries
         }
     });
-    self.toolbox.router.get("/(.*)", self.toolbox.fastest, {
+    self.toolbox.router.get("/(.*)", self.toolbox.cacheFirst, {
         origin: /cdn\.bootcss\.com/,
         cache: {
             name: staticAssetsCacheName,
@@ -71,35 +71,35 @@
         }
     });
 
-    self.toolbox.router.get("/(.*)", self.toolbox.fastest, {
+    self.toolbox.router.get("/(.*)", self.toolbox.cacheFirst, {
         origin: /a\.disquscdn\.com/,
         cache: {
             name: vendorCacheName,
             maxEntries: maxEntries
         }
     });
-    self.toolbox.router.get("/(.*)", self.toolbox.fastest, {
+    self.toolbox.router.get("/(.*)", self.toolbox.cacheFirst, {
         origin: /c\.disquscdn\.com/,
         cache: {
             name: vendorCacheName,
             maxEntries: maxEntries
         }
     });
-    self.toolbox.router.get("/(.*)", self.toolbox.fastest, {
+    self.toolbox.router.get("/(.*)", self.toolbox.cacheFirst, {
         origin: /uploads\.disquscdn\.com/,
         cache: {
             name: vendorCacheName,
             maxEntries: maxEntries
         }
     });
-    self.toolbox.router.get("/(.*)", self.toolbox.fastest, {
+    self.toolbox.router.get("/(.*)", self.toolbox.cacheFirst, {
         origin: /media\.disquscdn\.com/,
         cache: {
             name: vendorCacheName,
             maxEntries: maxEntries
         }
     });
-    self.toolbox.router.get("/(.*)", self.toolbox.fastest, {
+    self.toolbox.router.get("/(.*)", self.toolbox.cacheFirst, {
         origin: /referrer\.disqus\.com/,
         cache: {
             name: vendorCacheName,

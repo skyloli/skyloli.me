@@ -26,5 +26,12 @@ export function init() {
 		$(`.des-of-author-des[data-index="${index}"]`).addClass('active');
 	});
 	
+	$('.post-toc a.nav-link').click(function(e){
+		$('.post-toc a.nav-link').removeClass('active');
+		$(this).addClass('active');
+		$('html,body').animate({
+			scrollTop: $('.post-body a.headerlink[href="'+ $(this).attr('href') +'"]').offset().top
+		},1000);
+	});
 
 }
