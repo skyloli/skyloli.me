@@ -1035,7 +1035,7 @@ template {
   white-space: nowrap;
   line-height: 1.8;
 }
-.sidebar .sidebar-inner .post-toc .nav .active-current>a {
+.sidebar .sidebar-inner .post-toc .nav-item a.active {
   color: #fc6423;
   border-bottom-color: #fc6423;
 }
