@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Hi, aphage</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://aphage.me/"/>
+  <updated>2020-04-23T07:27:44.849Z</updated>
+  <id>https://aphage.me/</id>
+  
+  <author>
+    <name>aphage</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vs生成shellcode设置</title>
+    <link href="https://aphage.me/vs-build-shellcode-settings/"/>
+    <id>https://aphage.me/vs-build-shellcode-settings/</id>
+    <published>2020-04-05T21:00:00.000Z</published>
+    <updated>2020-04-23T07:27:44.849Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+      
+    
+    </summary>
+    
+    
+      <category term="c/c++" scheme="https://aphage.me/categories/c-c/"/>
+    
+      <category term="shellcode" scheme="https://aphage.me/categories/c-c/shellcode/"/>
+    
+      <category term="visual studio" scheme="https://aphage.me/categories/c-c/visual-studio/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>boost build for vs2019</title>
+    <link href="https://aphage.me/boost-build-for-vs2019/"/>
+    <id>https://aphage.me/boost-build-for-vs2019/</id>
+    <published>2020-03-29T21:20:46.000Z</published>
+    <updated>2020-04-23T07:27:44.849Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Download for boost&lt;/p&gt;
+&lt;p&gt;下载 boost&lt;/p&gt;
+&lt;p&gt;Open the link: &lt;a href=&quot;https://www.boost.org/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.boost.org/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;打开链接：&lt;a href=&quot;https://www.boost.org/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.boost.org/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Download page: &lt;a href=&quot;https://www.boost.org/users/download/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.boost.org/users/download/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;下载页面：&lt;a href=&quot;https://www.boost.org/users/download/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.boost.org/users/download/&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="c/c++" scheme="https://aphage.me/categories/c-c/"/>
+    
+      <category term="boost" scheme="https://aphage.me/categories/c-c/boost/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>BOSS 直聘 反反调试</title>
+    <link href="https://aphage.me/boss-zhipin-antianti-debug/"/>
+    <id>https://aphage.me/boss-zhipin-antianti-debug/</id>
+    <published>2020-03-29T14:20:46.000Z</published>
+    <updated>2020-04-23T07:27:44.849Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+      
+    
+    </summary>
+    
+    
+      <category term="debug" scheme="https://aphage.me/categories/debug/"/>
+    
+      <category term="javascript" scheme="https://aphage.me/categories/debug/javascript/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>JVM 参数设置</title>
+    <link href="https://aphage.me/jvm-parameters/"/>
+    <id>https://aphage.me/jvm-parameters/</id>
+    <published>2019-05-20T14:30:46.000Z</published>
+    <updated>2020-04-23T07:27:44.849Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;code&gt;JDK8-废弃永久代（PermGen）迎来元空间（Metaspace）&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;移除永久代是为融合HotSpot JVM与 JRockit VM而做出的努力，因为JRockit没有永久代，不需要配置永久代。&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;JVM内存为两块：PermanentSapce和HeapSpace&lt;/p&gt;
+&lt;p&gt;PermanentSapce：存放代码的(字节码)&lt;/p&gt;
+&lt;p&gt;HeapSpace：堆&lt;/p&gt;
+&lt;p&gt;其中HeapSpace= {Old + NEW {= Eden , from, to } }&lt;/p&gt;
+&lt;p&gt;一般设置一下内存大小和回收策略就行了&lt;/p&gt;
+&lt;hr&gt;
+    
+    </summary>
+    
+    
+      <category term="java" scheme="https://aphage.me/categories/java/"/>
+    
+      <category term="jvm" scheme="https://aphage.me/categories/java/jvm/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Failed to start LSB</title>
+    <link href="https://aphage.me/Failed-to-start-LSB/"/>
+    <id>https://aphage.me/Failed-to-start-LSB/</id>
+    <published>2019-05-01T22:53:25.000Z</published>
+    <updated>2020-04-23T07:27:44.849Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+      
+    
+    </summary>
+    
+    
+      <category term="linux" scheme="https://aphage.me/categories/linux/"/>
+    
+      <category term="centos" scheme="https://aphage.me/categories/linux/centos/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Gradle 打包jar的几种方式</title>
+    <link href="https://aphage.me/Gradle-Generate-Jar/"/>
+    <id>https://aphage.me/Gradle-Generate-Jar/</id>
+    <published>2019-05-01T22:53:25.000Z</published>
+    <updated>2020-04-23T07:27:44.849Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;jar任务&quot;&gt;&lt;a href=&quot;#jar任务&quot; class=&quot;headerlink&quot; title=&quot;jar任务&quot;&gt;&lt;/a&gt;jar任务&lt;/h2&gt;&lt;p&gt;打包成一个Jar&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;jar &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    from &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#x2F;&amp;#x2F;添加依懒到打包文件&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#x2F;&amp;#x2F;configurations.compile.collect &amp;#123; it.isDirectory() ? it : zipTree(it) &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        configurations.runtime.collect&amp;#123;zipTree(it)&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    manifest &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        attributes &amp;#39;Main-Class&amp;#39;: appMainClass&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="java" scheme="https://aphage.me/categories/java/"/>
+    
+      <category term="gradle" scheme="https://aphage.me/categories/java/gradle/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Linux 修改最大打开文件数量</title>
+    <link href="https://aphage.me/change-linux-max-open-file/"/>
+    <id>https://aphage.me/change-linux-max-open-file/</id>
+    <published>2019-05-01T22:53:25.000Z</published>
+    <updated>2020-04-23T07:27:44.849Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;查看&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;ulimit&lt;/span&gt; -n&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;临时修改&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;ulimit&lt;/span&gt; -n 65535&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;永久修改&lt;/p&gt;
+&lt;p&gt;在&lt;code&gt;/etc/security/limits.conf&lt;/code&gt;加入&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;* soft nofile 65535&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;* hard nofile 65535&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;code&gt;*&lt;/code&gt; 表示所有用户&lt;/p&gt;
+&lt;p&gt;注意用户最大打开文件数量不能大于系统规定的打开数量&lt;/p&gt;
+&lt;p&gt;查看系统最大打开文件数量&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;cat /proc/sys/fs/file-max&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="linux" scheme="https://aphage.me/categories/linux/"/>
+    
+      <category term="centos" scheme="https://aphage.me/categories/linux/centos/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>RabbitMQ 入门教程</title>
+    <link href="https://aphage.me/rabbitmq/"/>
+    <id>https://aphage.me/rabbitmq/</id>
+    <published>2019-05-01T22:53:25.000Z</published>
+    <updated>2020-04-23T07:27:44.849Z</updated>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#link1&quot;&gt;什么是MQ为什么使用MQ&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#link2&quot;&gt;为什么选择RabbitMQ&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#link3&quot;&gt;怎么安装RabbitMQ&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#link4&quot;&gt;RabbitMQ怎么使用&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#link5&quot;&gt;RabbitMQ概念&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#link6&quot;&gt;RabbitMQ消息事物&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#link7&quot;&gt;RabbitMQ消息确认&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#link8&quot;&gt;RabbitMQ配置&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#link9&quot;&gt;RabbitMQ集群&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#link10&quot;&gt;帮助&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;当前版本&quot;&gt;&lt;a href=&quot;#当前版本&quot; class=&quot;headerlink&quot; title=&quot;当前版本&quot;&gt;&lt;/a&gt;当前版本&lt;/h1&gt;&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;CentOS 7&lt;/li&gt;
+&lt;li&gt;Erlang 21.x&lt;/li&gt;
+&lt;li&gt;RabbitMQ 3.7.14&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+      <category term="java" scheme="https://aphage.me/categories/java/"/>
+    
+      <category term="rabbitmq" scheme="https://aphage.me/categories/java/rabbitmq/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>csdn 突破正版链接直接下载</title>
+    <link href="https://aphage.me/csdn-breakthrough-download/"/>
+    <id>https://aphage.me/csdn-breakthrough-download/</id>
+    <published>2018-10-10T22:53:25.000Z</published>
+    <updated>2020-04-23T07:27:44.849Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+      
+    
+    </summary>
+    
+    
+      <category term="分享境" scheme="https://aphage.me/categories/%E5%88%86%E4%BA%AB%E5%A2%83/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://aphage.me/hello-world/"/>
+    <id>https://aphage.me/hello-world/</id>
+    <published>2017-11-20T11:30:46.000Z</published>
+    <updated>2020-04-23T07:27:44.849Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a href=&quot;#Quick-Start&quot; class=&quot;headerlink&quot; title=&quot;Quick Start&quot;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;&lt;h3 id=&quot;Create-a-new-post&quot;&gt;&lt;a href=&quot;#Create-a-new-post&quot; class=&quot;headerlink&quot; title=&quot;Create a new post&quot;&gt;&lt;/a&gt;Create a new post&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo new &lt;span class=&quot;string&quot;&gt;&quot;My New Post&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/writing.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Writing&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="事件簿" scheme="https://aphage.me/categories/%E4%BA%8B%E4%BB%B6%E7%B0%BF/"/>
+    
+    
+  </entry>
+  
+</feed>
