@@ -104,6 +104,22 @@ ignore:
 ## Themes: https://hexo.io/themes/
 theme: Level6
 
+sitemap:
+  path: sitemap.xml
+  template: 
+  rel: true
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content:
+  content_limit:
+  content_limit_delim:
+  order_by: -date
+  icon:
+  autodiscovery: false
+  template:
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:

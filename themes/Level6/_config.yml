@@ -129,7 +129,7 @@ footer:
   
   theme: true
   
-  sitemap:
+  sitemap: /sitemap.xml
   
   custom_text: 托管于<a href="https://github.com/" target="_blank" rel="nofollow"> GitHub</a>. <a href="https://dash.cloudflare.com" target="_blank" rel="nofollow">cloudflare </a>提供 CDN 解析服务.
   
