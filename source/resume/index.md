@@ -1,5 +1,5 @@
 ---
-title: Aphage
+title: pick me
 id: 933
 date: 2014-06-19 01:53:52
 type: "about"
@@ -7,12 +7,12 @@ type: "about"
 * 教育：大专/广东省国防工业职工大学/计算机应用技术
 * 博客：[https://aphage.me](https://aphage.me)
 * Github：[https://github.com/aphage](https://github.com/aphage)
-* 联系：isxiatian@gmail.com/254237301@qq.com
+* 联系：isxiatian@gmail.com/254237301@qq.com/18620942446
 * 期望职位：JAVA程序员
 
 # 教育经历
 
-* 大专/广东省国防工业职工大学/计算机应用技术（成人大专/在读）
+* 大专/广东省国防工业职工大学/计算机应用技术
 * 北大青鸟电脑计算机职业培训学校/ACCP
 * 中专/清新区职业技术学校/计算机应用
 
@@ -20,16 +20,12 @@ type: "about"
 
 ## 广州市粤商实业股份有限公司 （ 2019年4月 ~ 2019年9月 ）
 
-- 负责后端开发工作并协助同事解决问题
+- **负责后端开发工作并协助同事解决问题**
 
 ## 广州稳捷信息科技有限公司 （ 2016年7月 ~ 2018年9月 ）
 
-- 负责前端后端开发，负责公司产品售后维护
-- 在职期间帮助企业获得高新技术企业认证
-
-## 长城宽带（ 2013年7月 ~ 2014年8月 ）
-
-安装宽带;维护网络交换机;跳通光纤
+- **负责前端后端开发，负责公司产品售后维护**
+- **在职期间帮助企业获得高新技术企业认证**
 
 # 项目经验
 
@@ -63,7 +59,7 @@ type: "about"
 * Web框架：SpringCloud/Struts2/Hibernate/MyBatis/MyBatis Plus/Shiro
 * 前端框架：Bootstrap/LayUI/Javascript/Jquery/Angular
 * 数据库相关：MySQL/SQL Server/Oracle
-* 其他：socket编程/Boost Asio/Linux/Svn/Git/Maven/Docker/podman
----      
+* 其他：socket编程/汇编/逆向/Boost Asio/Linux/Svn/Git/Maven/Docker/podman
+---
 # 致谢
 感谢您花时间阅读我的简历，期待能有机会和您共事。
