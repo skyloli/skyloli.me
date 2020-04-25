@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aphage.me/"/>
-  <updated>2020-04-23T07:43:12.201Z</updated>
+  <updated>2020-04-25T09:52:38.520Z</updated>
   <id>https://aphage.me/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://aphage.me/vs-build-shellcode-settings/"/>
     <id>https://aphage.me/vs-build-shellcode-settings/</id>
     <published>2020-04-05T21:00:00.000Z</published>
-    <updated>2020-04-23T07:43:12.201Z</updated>
+    <updated>2020-04-25T09:52:38.520Z</updated>
     
     <summary type="html">
     
@@ -47,7 +47,7 @@
     <link href="https://aphage.me/boost-build-for-vs2019/"/>
     <id>https://aphage.me/boost-build-for-vs2019/</id>
     <published>2020-03-29T21:20:46.000Z</published>
-    <updated>2020-04-23T07:43:12.201Z</updated>
+    <updated>2020-04-25T09:52:38.520Z</updated>
     
     <summary type="html">
     
@@ -69,11 +69,33 @@
   </entry>
   
   <entry>
+    <title>c++ template class export</title>
+    <link href="https://aphage.me/cplusplus-template-class-export/"/>
+    <id>https://aphage.me/cplusplus-template-class-export/</id>
+    <published>2020-03-29T21:20:46.000Z</published>
+    <updated>2020-04-25T09:52:38.520Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;c-template-class-export&quot;&gt;&lt;a href=&quot;#c-template-class-export&quot; class=&quot;headerlink&quot; title=&quot;c++ template class export&quot;&gt;&lt;/a&gt;c++ template class export&lt;/h1&gt;&lt;p&gt;c++ 模板类导出&lt;/p&gt;
+&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;template&lt;/span&gt;&amp;lt;&lt;span class=&quot;keyword&quot;&gt;typename&lt;/span&gt; T&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; __&lt;span class=&quot;title&quot;&gt;declspec&lt;/span&gt;(&lt;span class=&quot;title&quot;&gt;dllexport&lt;/span&gt;) &lt;span class=&quot;title&quot;&gt;Hello3&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	Hello3(&lt;span class=&quot;built_in&quot;&gt;std&lt;/span&gt;::&lt;span class=&quot;built_in&quot;&gt;string&lt;/span&gt;&amp;amp;&amp;amp; name) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;-&amp;gt;name = name;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Say&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(T v)&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;built_in&quot;&gt;std&lt;/span&gt;::&lt;span class=&quot;built_in&quot;&gt;cout&lt;/span&gt; &amp;lt;&amp;lt; name &amp;lt;&amp;lt; &lt;span class=&quot;string&quot;&gt;&quot;: &quot;&lt;/span&gt; &amp;lt;&amp;lt; v &amp;lt;&amp;lt; &lt;span class=&quot;built_in&quot;&gt;std&lt;/span&gt;::&lt;span class=&quot;built_in&quot;&gt;endl&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;private&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;built_in&quot;&gt;std&lt;/span&gt;::&lt;span class=&quot;built_in&quot;&gt;string&lt;/span&gt; name;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//Explicit instantiation&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;template&lt;/span&gt; &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Hello3&lt;/span&gt;&amp;lt;std::string&amp;gt;;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;template&lt;/span&gt; &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; __&lt;span class=&quot;title&quot;&gt;declspec&lt;/span&gt;(&lt;span class=&quot;title&quot;&gt;dllexport&lt;/span&gt;) &lt;span class=&quot;title&quot;&gt;Hello3&lt;/span&gt;&amp;lt;int&amp;gt;;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//__declspec(dllexport) can be written on the CLASS or here&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//__declspec(dllexport) 可以写在 CLASS 上或在这里&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;The focus is on &lt;code&gt;Explicit instantiation&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;重点是 &lt;code&gt;Explicit instantiation&lt;/code&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="c/c++" scheme="https://aphage.me/categories/c-c/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>BOSS 直聘 反反调试</title>
     <link href="https://aphage.me/boss-zhipin-antianti-debug/"/>
     <id>https://aphage.me/boss-zhipin-antianti-debug/</id>
     <published>2020-03-29T14:20:46.000Z</published>
-    <updated>2020-04-23T07:43:12.201Z</updated>
+    <updated>2020-04-25T09:52:38.520Z</updated>
     
     <summary type="html">
     
@@ -97,7 +119,7 @@
     <link href="https://aphage.me/jvm-parameters/"/>
     <id>https://aphage.me/jvm-parameters/</id>
     <published>2019-05-20T14:30:46.000Z</published>
-    <updated>2020-04-23T07:43:12.201Z</updated>
+    <updated>2020-04-25T09:52:38.520Z</updated>
     
     <summary type="html">
     
@@ -125,7 +147,7 @@
     <link href="https://aphage.me/Failed-to-start-LSB/"/>
     <id>https://aphage.me/Failed-to-start-LSB/</id>
     <published>2019-05-01T22:53:25.000Z</published>
-    <updated>2020-04-23T07:43:12.201Z</updated>
+    <updated>2020-04-25T09:52:38.520Z</updated>
     
     <summary type="html">
     
@@ -149,7 +171,7 @@
     <link href="https://aphage.me/Gradle-Generate-Jar/"/>
     <id>https://aphage.me/Gradle-Generate-Jar/</id>
     <published>2019-05-01T22:53:25.000Z</published>
-    <updated>2020-04-23T07:43:12.201Z</updated>
+    <updated>2020-04-25T09:52:38.520Z</updated>
     
     <summary type="html">
     
@@ -171,7 +193,7 @@
     <link href="https://aphage.me/change-linux-max-open-file/"/>
     <id>https://aphage.me/change-linux-max-open-file/</id>
     <published>2019-05-01T22:53:25.000Z</published>
-    <updated>2020-04-23T07:43:12.201Z</updated>
+    <updated>2020-04-25T09:52:38.520Z</updated>
     
     <summary type="html">
     
@@ -205,7 +227,7 @@
     <link href="https://aphage.me/rabbitmq/"/>
     <id>https://aphage.me/rabbitmq/</id>
     <published>2019-05-01T22:53:25.000Z</published>
-    <updated>2020-04-23T07:43:12.201Z</updated>
+    <updated>2020-04-25T09:52:38.520Z</updated>
     
     <summary type="html">
     
@@ -244,7 +266,7 @@
     <link href="https://aphage.me/csdn-breakthrough-download/"/>
     <id>https://aphage.me/csdn-breakthrough-download/</id>
     <published>2018-10-10T22:53:25.000Z</published>
-    <updated>2020-04-23T07:43:12.201Z</updated>
+    <updated>2020-04-25T09:52:38.520Z</updated>
     
     <summary type="html">
     
@@ -266,7 +288,7 @@
     <link href="https://aphage.me/hello-world/"/>
     <id>https://aphage.me/hello-world/</id>
     <published>2017-11-20T11:30:46.000Z</published>
-    <updated>2020-04-23T07:43:12.201Z</updated>
+    <updated>2020-04-25T09:52:38.520Z</updated>
     
     <summary type="html">
     
