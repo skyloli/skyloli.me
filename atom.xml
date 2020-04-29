@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aphage.me/"/>
-  <updated>2020-04-26T06:16:28.648Z</updated>
+  <updated>2020-04-29T12:40:19.260Z</updated>
   <id>https://aphage.me/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>使用Vcpkg进行包管理</title>
+    <link href="https://aphage.me/use-vcpkg/"/>
+    <id>https://aphage.me/use-vcpkg/</id>
+    <published>2020-04-29T19:31:01.000Z</published>
+    <updated>2020-04-29T12:40:19.260Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h2&gt;&lt;p&gt;妈妈再也不用担心我编译openssl、boost了&lt;/p&gt;
+&lt;p&gt;官网&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://docs.microsoft.com/en-us/cpp/build/vcpkg?view=vs-2019&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://docs.microsoft.com/en-us/cpp/build/vcpkg?view=vs-2019&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/microsoft/vcpkg&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://github.com/microsoft/vcpkg&lt;/a&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;gt; git &lt;span class=&quot;built_in&quot;&gt;clone&lt;/span&gt; https://github.com/Microsoft/vcpkg.git&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;gt; &lt;span class=&quot;built_in&quot;&gt;cd&lt;/span&gt; vcpkg&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;PS&amp;gt; .\bootstrap-vcpkg.bat&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Linux:~/$ ./bootstrap-vcpkg.sh&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;根据官网提示，我执行了上面的命令，然后报错了！&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="c/c++" scheme="https://aphage.me/categories/c-c/"/>
+    
+      <category term="vcpkg" scheme="https://aphage.me/categories/c-c/vcpkg/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>vs生成shellcode设置</title>
     <link href="https://aphage.me/vs-build-shellcode-settings/"/>
     <id>https://aphage.me/vs-build-shellcode-settings/</id>
     <published>2020-04-05T21:00:00.000Z</published>
-    <updated>2020-04-26T06:16:28.648Z</updated>
+    <updated>2020-04-29T12:40:19.260Z</updated>
     
     <summary type="html">
     
@@ -47,7 +74,7 @@
     <link href="https://aphage.me/boost-build-for-vs2019/"/>
     <id>https://aphage.me/boost-build-for-vs2019/</id>
     <published>2020-03-29T21:20:46.000Z</published>
-    <updated>2020-04-26T06:16:28.648Z</updated>
+    <updated>2020-04-29T12:40:19.260Z</updated>
     
     <summary type="html">
     
@@ -73,7 +100,7 @@
     <link href="https://aphage.me/cplusplus-template-class-export/"/>
     <id>https://aphage.me/cplusplus-template-class-export/</id>
     <published>2020-03-29T21:20:46.000Z</published>
-    <updated>2020-04-26T06:16:28.648Z</updated>
+    <updated>2020-04-29T12:40:19.260Z</updated>
     
     <summary type="html">
     
@@ -95,7 +122,7 @@
     <link href="https://aphage.me/boss-zhipin-antianti-debug/"/>
     <id>https://aphage.me/boss-zhipin-antianti-debug/</id>
     <published>2020-03-29T14:20:46.000Z</published>
-    <updated>2020-04-26T06:16:28.648Z</updated>
+    <updated>2020-04-29T12:40:19.260Z</updated>
     
     <summary type="html">
     
@@ -119,7 +146,7 @@
     <link href="https://aphage.me/jvm-parameters/"/>
     <id>https://aphage.me/jvm-parameters/</id>
     <published>2019-05-20T14:30:46.000Z</published>
-    <updated>2020-04-26T06:16:28.648Z</updated>
+    <updated>2020-04-29T12:40:19.260Z</updated>
     
     <summary type="html">
     
@@ -147,7 +174,7 @@
     <link href="https://aphage.me/Failed-to-start-LSB/"/>
     <id>https://aphage.me/Failed-to-start-LSB/</id>
     <published>2019-05-01T22:53:25.000Z</published>
-    <updated>2020-04-26T06:16:28.648Z</updated>
+    <updated>2020-04-29T12:40:19.260Z</updated>
     
     <summary type="html">
     
@@ -171,7 +198,7 @@
     <link href="https://aphage.me/Gradle-Generate-Jar/"/>
     <id>https://aphage.me/Gradle-Generate-Jar/</id>
     <published>2019-05-01T22:53:25.000Z</published>
-    <updated>2020-04-26T06:16:28.648Z</updated>
+    <updated>2020-04-29T12:40:19.260Z</updated>
     
     <summary type="html">
     
@@ -193,7 +220,7 @@
     <link href="https://aphage.me/change-linux-max-open-file/"/>
     <id>https://aphage.me/change-linux-max-open-file/</id>
     <published>2019-05-01T22:53:25.000Z</published>
-    <updated>2020-04-26T06:16:28.648Z</updated>
+    <updated>2020-04-29T12:40:19.260Z</updated>
     
     <summary type="html">
     
@@ -227,7 +254,7 @@
     <link href="https://aphage.me/rabbitmq/"/>
     <id>https://aphage.me/rabbitmq/</id>
     <published>2019-05-01T22:53:25.000Z</published>
-    <updated>2020-04-26T06:16:28.648Z</updated>
+    <updated>2020-04-29T12:40:19.260Z</updated>
     
     <summary type="html">
     
@@ -266,7 +293,7 @@
     <link href="https://aphage.me/csdn-breakthrough-download/"/>
     <id>https://aphage.me/csdn-breakthrough-download/</id>
     <published>2018-10-10T22:53:25.000Z</published>
-    <updated>2020-04-26T06:16:28.648Z</updated>
+    <updated>2020-04-29T12:40:19.260Z</updated>
     
     <summary type="html">
     
@@ -288,7 +315,7 @@
     <link href="https://aphage.me/hello-world/"/>
     <id>https://aphage.me/hello-world/</id>
     <published>2017-11-20T11:30:46.000Z</published>
-    <updated>2020-04-26T06:16:28.648Z</updated>
+    <updated>2020-04-29T12:40:19.260Z</updated>
     
     <summary type="html">
     
