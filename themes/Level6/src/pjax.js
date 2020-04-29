@@ -5,6 +5,7 @@ import * as NProgress from './nprogress'
 import {pisces} from './pisces'
 import {postDetails} from './post-details'
 import {init} from './xx'
+import {zoomContent} from './zoom'
 
 $(document).pjax('a:not(.fancybox):not([target="_blank"])', '#main', {
   scrollTo: $('#main').position().top - 60,
@@ -37,6 +38,7 @@ $(document).on('pjax:end', function () {
 	pisces();
 	postDetails();
 	init();
+	zoomContent();
     window.originTitle = document.title;
 
 });

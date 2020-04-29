@@ -7,7 +7,7 @@ import './pjax'
 import {init} from './xx'
 import {pisces} from './pisces'
 import {postDetails} from './post-details'
-
+import {zoomContent} from './zoom'
 
 // Navigation Bar
 $('.menu-item').hover(function () {
@@ -34,3 +34,4 @@ $('.search-form').submit(function (e) {
 pisces();
 postDetails();
 init();
+zoomContent();
