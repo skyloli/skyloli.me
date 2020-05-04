@@ -13,6 +13,6 @@ const apFixed = new APlayer({
 $.ajax({
   url: CONFIG.online.music,
   success: function (list) {
-    apFixed.list.add(JSON.parse(list));
+    apFixed.list.add(list);
   }
 });
