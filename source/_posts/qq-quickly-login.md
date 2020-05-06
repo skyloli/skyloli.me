@@ -7,6 +7,8 @@ categories:
 ---
 直接放硬（硬编码，需要的自己封装）代码了
 
+<!--more-->
+
 原理可以看这篇文章
 
 https://blog.csdn.net/qq3401247010/article/details/77867410
