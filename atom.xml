@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aphage.me/"/>
-  <updated>2020-05-07T09:17:22.365Z</updated>
+  <updated>2020-05-09T02:32:26.461Z</updated>
   <id>https://aphage.me/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://aphage.me/qq-quickly-login/"/>
     <id>https://aphage.me/qq-quickly-login/</id>
     <published>2020-05-01T12:20:44.000Z</published>
-    <updated>2020-05-07T09:17:22.365Z</updated>
+    <updated>2020-05-09T02:32:26.461Z</updated>
     
     <summary type="html">
     
@@ -44,7 +44,7 @@
     <link href="https://aphage.me/use-vcpkg/"/>
     <id>https://aphage.me/use-vcpkg/</id>
     <published>2020-04-29T19:31:01.000Z</published>
-    <updated>2020-05-07T09:17:22.365Z</updated>
+    <updated>2020-05-09T02:32:26.461Z</updated>
     
     <summary type="html">
     
@@ -71,7 +71,7 @@
     <link href="https://aphage.me/vs-build-shellcode-settings/"/>
     <id>https://aphage.me/vs-build-shellcode-settings/</id>
     <published>2020-04-05T21:00:00.000Z</published>
-    <updated>2020-05-07T09:17:22.365Z</updated>
+    <updated>2020-05-09T02:32:26.461Z</updated>
     
     <summary type="html">
     
@@ -97,7 +97,7 @@
     <link href="https://aphage.me/boost-build-for-vs2019/"/>
     <id>https://aphage.me/boost-build-for-vs2019/</id>
     <published>2020-03-29T21:20:46.000Z</published>
-    <updated>2020-05-07T09:17:22.365Z</updated>
+    <updated>2020-05-09T02:32:26.461Z</updated>
     
     <summary type="html">
     
@@ -123,7 +123,7 @@
     <link href="https://aphage.me/cplusplus-template-class-export/"/>
     <id>https://aphage.me/cplusplus-template-class-export/</id>
     <published>2020-03-29T21:20:46.000Z</published>
-    <updated>2020-05-07T09:17:22.365Z</updated>
+    <updated>2020-05-09T02:32:26.461Z</updated>
     
     <summary type="html">
     
@@ -145,7 +145,7 @@
     <link href="https://aphage.me/boss-zhipin-antianti-debug/"/>
     <id>https://aphage.me/boss-zhipin-antianti-debug/</id>
     <published>2020-03-29T14:20:46.000Z</published>
-    <updated>2020-05-07T09:17:22.365Z</updated>
+    <updated>2020-05-09T02:32:26.461Z</updated>
     
     <summary type="html">
     
@@ -165,39 +165,11 @@
   </entry>
   
   <entry>
-    <title>JVM 参数设置</title>
-    <link href="https://aphage.me/jvm-parameters/"/>
-    <id>https://aphage.me/jvm-parameters/</id>
-    <published>2019-05-20T14:30:46.000Z</published>
-    <updated>2020-05-07T09:17:22.365Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;code&gt;JDK8-废弃永久代（PermGen）迎来元空间（Metaspace）&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;移除永久代是为融合HotSpot JVM与 JRockit VM而做出的努力，因为JRockit没有永久代，不需要配置永久代。&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;JVM内存为两块：PermanentSapce和HeapSpace&lt;/p&gt;
-&lt;p&gt;PermanentSapce：存放代码的(字节码)&lt;/p&gt;
-&lt;p&gt;HeapSpace：堆&lt;/p&gt;
-&lt;p&gt;其中HeapSpace= {Old + NEW {= Eden , from, to } }&lt;/p&gt;
-&lt;p&gt;一般设置一下内存大小和回收策略就行了&lt;/p&gt;
-&lt;hr&gt;
-    
-    </summary>
-    
-    
-      <category term="java" scheme="https://aphage.me/categories/java/"/>
-    
-      <category term="jvm" scheme="https://aphage.me/categories/java/jvm/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>Failed to start LSB</title>
     <link href="https://aphage.me/Failed-to-start-LSB/"/>
     <id>https://aphage.me/Failed-to-start-LSB/</id>
     <published>2019-05-01T22:53:25.000Z</published>
-    <updated>2020-05-07T09:17:22.365Z</updated>
+    <updated>2020-05-09T02:32:26.461Z</updated>
     
     <summary type="html">
     
@@ -221,7 +193,7 @@
     <link href="https://aphage.me/Gradle-Generate-Jar/"/>
     <id>https://aphage.me/Gradle-Generate-Jar/</id>
     <published>2019-05-01T22:53:25.000Z</published>
-    <updated>2020-05-07T09:17:22.365Z</updated>
+    <updated>2020-05-09T02:32:26.461Z</updated>
     
     <summary type="html">
     
@@ -243,7 +215,7 @@
     <link href="https://aphage.me/change-linux-max-open-file/"/>
     <id>https://aphage.me/change-linux-max-open-file/</id>
     <published>2019-05-01T22:53:25.000Z</published>
-    <updated>2020-05-07T09:17:22.365Z</updated>
+    <updated>2020-05-09T02:32:26.461Z</updated>
     
     <summary type="html">
     
@@ -273,50 +245,11 @@
   </entry>
   
   <entry>
-    <title>RabbitMQ 入门教程</title>
-    <link href="https://aphage.me/rabbitmq/"/>
-    <id>https://aphage.me/rabbitmq/</id>
-    <published>2019-05-01T22:53:25.000Z</published>
-    <updated>2020-05-07T09:17:22.365Z</updated>
-    
-    <summary type="html">
-    
-      &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#link1&quot;&gt;什么是MQ为什么使用MQ&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#link2&quot;&gt;为什么选择RabbitMQ&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#link3&quot;&gt;怎么安装RabbitMQ&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#link4&quot;&gt;RabbitMQ怎么使用&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#link5&quot;&gt;RabbitMQ概念&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#link6&quot;&gt;RabbitMQ消息事物&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#link7&quot;&gt;RabbitMQ消息确认&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#link8&quot;&gt;RabbitMQ配置&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#link9&quot;&gt;RabbitMQ集群&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#link10&quot;&gt;帮助&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&quot;当前版本&quot;&gt;&lt;a href=&quot;#当前版本&quot; class=&quot;headerlink&quot; title=&quot;当前版本&quot;&gt;&lt;/a&gt;当前版本&lt;/h1&gt;&lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;CentOS 7&lt;/li&gt;
-&lt;li&gt;Erlang 21.x&lt;/li&gt;
-&lt;li&gt;RabbitMQ 3.7.14&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-    
-      <category term="java" scheme="https://aphage.me/categories/java/"/>
-    
-      <category term="rabbitmq" scheme="https://aphage.me/categories/java/rabbitmq/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>csdn 突破正版链接直接下载</title>
     <link href="https://aphage.me/csdn-breakthrough-download/"/>
     <id>https://aphage.me/csdn-breakthrough-download/</id>
     <published>2018-10-10T22:53:25.000Z</published>
-    <updated>2020-05-07T09:17:22.365Z</updated>
+    <updated>2020-05-09T02:32:26.461Z</updated>
     
     <summary type="html">
     
@@ -338,7 +271,7 @@
     <link href="https://aphage.me/hello-world/"/>
     <id>https://aphage.me/hello-world/</id>
     <published>2017-11-20T11:30:46.000Z</published>
-    <updated>2020-05-07T09:17:22.365Z</updated>
+    <updated>2020-05-09T02:32:26.461Z</updated>
     
     <summary type="html">
     
