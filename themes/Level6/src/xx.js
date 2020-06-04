@@ -37,14 +37,18 @@ export function init() {
 	});
 	
 	function share () {
-	  if ($('.post-share').length) {
-		$('.post-share').share({
-		  disabled: ['tencent', 'douban', 'linkedin', 'diandian', 'facebook', 'google'],
-		  wechatQrcodeTitle: "微信扫一扫",
-		  wechatQrcodeHelper: '<p>微信扫一扫，右上角分享</p>',
-		  source: CONFIG.site.title
-		})
-	  }
+	  $(function(){
+
+		if ($('.post-share').length) {
+			$('.post-share').share({
+			  disabled: ['tencent', 'douban', 'linkedin', 'diandian', 'facebook', 'google'],
+			  wechatQrcodeTitle: "微信扫一扫",
+			  wechatQrcodeHelper: '<p>微信扫一扫，右上角分享</p>',
+			  source: CONFIG.site.title
+			})
+		  }
+	  });
+	  
 	}
 	share();
 	
