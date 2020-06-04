@@ -103,7 +103,7 @@
 		{#####################}
 		
 		{% if not is_index %}
-		  <div class="post-share">分享到：</div>
+		  <!-- <div class="post-share">分享到：</div> -->
 		  
 		  {% if (theme.pay.alipay or theme.pay.wechatpay or theme.pay.bitcoin) %}
 			  <div>
