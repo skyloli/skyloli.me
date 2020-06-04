@@ -1,5 +1,5 @@
 import $ from 'jquery'
-require('./jquery.share.min.js')
+import * as sharex from './jquery.share.min.js'
 import './nprogress.css'
 
 export function init() {
@@ -38,7 +38,7 @@ export function init() {
 	
 	function share () {
 	  if ($('.post-share').length) {
-		socialShare('.post-share',{
+		sharex.socialShare('.post-share',{
 		  disabled: ['tencent', 'douban', 'linkedin', 'diandian', 'facebook', 'google'],
 		  wechatQrcodeTitle: "微信扫一扫",
 		  wechatQrcodeHelper: '<p>微信扫一扫，右上角分享</p>',
