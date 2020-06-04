@@ -37,7 +37,7 @@ export function init() {
 	});
 	
 	function share () {
-	  $(function(){
+	  document.onload = function(){
 
 		if ($('.post-share').length) {
 			$('.post-share').share({
@@ -47,7 +47,7 @@ export function init() {
 			  source: CONFIG.site.title
 			})
 		  }
-	  });
+	  };
 	  
 	}
 	share();
