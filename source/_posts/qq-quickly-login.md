@@ -2,7 +2,7 @@
 title: 利用QQ快捷登陆盗取Token，好友，群信息
 date: 2020-05-01 12:20:44
 categories:
-  - [c/c++, reverse-engineering]
+  - [c/c++]
   - [web-security]
 ---
 直接放硬（硬编码，需要的自己封装）代码了
