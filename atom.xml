@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aphage.me/"/>
-  <updated>2020-05-14T21:20:32.176Z</updated>
+  <updated>2020-06-04T12:39:37.792Z</updated>
   <id>https://aphage.me/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://aphage.me/qq-quickly-login/"/>
     <id>https://aphage.me/qq-quickly-login/</id>
     <published>2020-05-01T12:20:44.000Z</published>
-    <updated>2020-05-14T21:20:32.176Z</updated>
+    <updated>2020-06-04T12:39:37.792Z</updated>
     
     <summary type="html">
     
@@ -31,8 +31,6 @@
     
     
       <category term="c/c++" scheme="https://aphage.me/categories/c-c/"/>
-    
-      <category term="reverse-engineering" scheme="https://aphage.me/categories/c-c/reverse-engineering/"/>
     
       <category term="web-security" scheme="https://aphage.me/categories/web-security/"/>
     
@@ -44,7 +42,7 @@
     <link href="https://aphage.me/use-vcpkg/"/>
     <id>https://aphage.me/use-vcpkg/</id>
     <published>2020-04-29T19:31:01.000Z</published>
-    <updated>2020-05-14T21:20:32.180Z</updated>
+    <updated>2020-06-04T12:39:37.792Z</updated>
     
     <summary type="html">
     
@@ -71,7 +69,7 @@
     <link href="https://aphage.me/vs-build-shellcode-settings/"/>
     <id>https://aphage.me/vs-build-shellcode-settings/</id>
     <published>2020-04-05T21:00:00.000Z</published>
-    <updated>2020-05-14T21:20:32.180Z</updated>
+    <updated>2020-06-04T12:39:37.792Z</updated>
     
     <summary type="html">
     
@@ -97,7 +95,7 @@
     <link href="https://aphage.me/boost-build-for-vs2019/"/>
     <id>https://aphage.me/boost-build-for-vs2019/</id>
     <published>2020-03-29T21:20:46.000Z</published>
-    <updated>2020-05-14T21:20:32.176Z</updated>
+    <updated>2020-06-04T12:39:37.792Z</updated>
     
     <summary type="html">
     
@@ -123,7 +121,7 @@
     <link href="https://aphage.me/cplusplus-template-class-export/"/>
     <id>https://aphage.me/cplusplus-template-class-export/</id>
     <published>2020-03-29T21:20:46.000Z</published>
-    <updated>2020-05-14T21:20:32.176Z</updated>
+    <updated>2020-06-04T12:39:37.792Z</updated>
     
     <summary type="html">
     
@@ -145,7 +143,7 @@
     <link href="https://aphage.me/boss-zhipin-antianti-debug/"/>
     <id>https://aphage.me/boss-zhipin-antianti-debug/</id>
     <published>2020-03-29T14:20:46.000Z</published>
-    <updated>2020-05-14T21:20:32.176Z</updated>
+    <updated>2020-06-04T12:39:37.792Z</updated>
     
     <summary type="html">
     
@@ -169,7 +167,7 @@
     <link href="https://aphage.me/Failed-to-start-LSB/"/>
     <id>https://aphage.me/Failed-to-start-LSB/</id>
     <published>2019-05-01T22:53:25.000Z</published>
-    <updated>2020-05-14T21:20:32.176Z</updated>
+    <updated>2020-06-04T12:39:37.792Z</updated>
     
     <summary type="html">
     
@@ -193,7 +191,7 @@
     <link href="https://aphage.me/Gradle-Generate-Jar/"/>
     <id>https://aphage.me/Gradle-Generate-Jar/</id>
     <published>2019-05-01T22:53:25.000Z</published>
-    <updated>2020-05-14T21:20:32.176Z</updated>
+    <updated>2020-06-04T12:39:37.792Z</updated>
     
     <summary type="html">
     
@@ -215,7 +213,7 @@
     <link href="https://aphage.me/change-linux-max-open-file/"/>
     <id>https://aphage.me/change-linux-max-open-file/</id>
     <published>2019-05-01T22:53:25.000Z</published>
-    <updated>2020-05-14T21:20:32.176Z</updated>
+    <updated>2020-06-04T12:39:37.792Z</updated>
     
     <summary type="html">
     
@@ -249,7 +247,7 @@
     <link href="https://aphage.me/csdn-breakthrough-download/"/>
     <id>https://aphage.me/csdn-breakthrough-download/</id>
     <published>2018-10-10T22:53:25.000Z</published>
-    <updated>2020-05-14T21:20:32.176Z</updated>
+    <updated>2020-06-04T12:39:37.792Z</updated>
     
     <summary type="html">
     
@@ -271,7 +269,7 @@
     <link href="https://aphage.me/hello-world/"/>
     <id>https://aphage.me/hello-world/</id>
     <published>2017-11-20T11:30:46.000Z</published>
-    <updated>2020-05-14T21:20:32.176Z</updated>
+    <updated>2020-06-04T12:39:37.792Z</updated>
     
     <summary type="html">
     
