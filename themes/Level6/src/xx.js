@@ -1,4 +1,5 @@
 import $ from 'jquery'
+require('social-share.js/dist/js/jquery.share.min.js');
 
 export function init() {
 	$('.sidebar-nav li').click(function(e){
@@ -34,8 +35,6 @@ export function init() {
 		},1000);
 	});
 	
-	require('social-share.js/dist/js/jquery.share.min.js');
-
 	function share () {
 	  if ($('.post-share').length) {
 		$('.post-share').share({
