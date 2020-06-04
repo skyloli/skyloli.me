@@ -1,5 +1,5 @@
 import $ from 'jquery'
-require('social-share.js')
+import 'social-share.js/dist/js/jquery.share.min.js'
 
 export function init() {
 	$('.sidebar-nav li').click(function(e){
