@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aphage.me/"/>
-  <updated>2020-07-15T21:18:20.280Z</updated>
+  <updated>2020-07-29T21:47:22.816Z</updated>
   <id>https://aphage.me/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://aphage.me/qq-quickly-login/"/>
     <id>https://aphage.me/qq-quickly-login/</id>
     <published>2020-05-01T12:20:44.000Z</published>
-    <updated>2020-07-15T21:18:20.280Z</updated>
+    <updated>2020-07-29T21:47:22.816Z</updated>
     
     <summary type="html">
     
@@ -42,14 +42,14 @@
     <link href="https://aphage.me/use-vcpkg/"/>
     <id>https://aphage.me/use-vcpkg/</id>
     <published>2020-04-29T19:31:01.000Z</published>
-    <updated>2020-07-15T21:18:20.280Z</updated>
+    <updated>2020-07-29T21:47:22.816Z</updated>
     
     <summary type="html">
     
       &lt;h2 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h2&gt;&lt;p&gt;妈妈再也不用担心我编译openssl、boost了&lt;/p&gt;
 &lt;p&gt;官网&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://docs.microsoft.com/en-us/cpp/build/vcpkg?view=vs-2019&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://docs.microsoft.com/en-us/cpp/build/vcpkg?view=vs-2019&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/microsoft/vcpkg&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://github.com/microsoft/vcpkg&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://docs.microsoft.com/en-us/cpp/build/vcpkg?view=vs-2019&quot;&gt;https://docs.microsoft.com/en-us/cpp/build/vcpkg?view=vs-2019&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/microsoft/vcpkg&quot;&gt;https://github.com/microsoft/vcpkg&lt;/a&gt;&lt;/p&gt;
 &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;gt; git &lt;span class=&quot;built_in&quot;&gt;clone&lt;/span&gt; https://github.com/Microsoft/vcpkg.git&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;gt; &lt;span class=&quot;built_in&quot;&gt;cd&lt;/span&gt; vcpkg&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;PS&amp;gt; .\bootstrap-vcpkg.bat&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Linux:~/$ ./bootstrap-vcpkg.sh&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 
 &lt;p&gt;根据官网提示，我执行了上面的命令，然后报错了！&lt;/p&gt;
@@ -69,7 +69,7 @@
     <link href="https://aphage.me/vs-build-shellcode-settings/"/>
     <id>https://aphage.me/vs-build-shellcode-settings/</id>
     <published>2020-04-05T21:00:00.000Z</published>
-    <updated>2020-07-15T21:18:20.280Z</updated>
+    <updated>2020-07-29T21:47:22.816Z</updated>
     
     <summary type="html">
     
@@ -95,16 +95,16 @@
     <link href="https://aphage.me/boost-build-for-vs2019/"/>
     <id>https://aphage.me/boost-build-for-vs2019/</id>
     <published>2020-03-29T21:20:46.000Z</published>
-    <updated>2020-07-15T21:18:20.276Z</updated>
+    <updated>2020-07-29T21:47:22.816Z</updated>
     
     <summary type="html">
     
       &lt;p&gt;Download for boost&lt;/p&gt;
 &lt;p&gt;下载 boost&lt;/p&gt;
-&lt;p&gt;Open the link: &lt;a href=&quot;https://www.boost.org/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.boost.org/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;打开链接：&lt;a href=&quot;https://www.boost.org/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.boost.org/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Download page: &lt;a href=&quot;https://www.boost.org/users/download/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.boost.org/users/download/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;下载页面：&lt;a href=&quot;https://www.boost.org/users/download/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.boost.org/users/download/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Open the link: &lt;a href=&quot;https://www.boost.org/&quot;&gt;https://www.boost.org/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;打开链接：&lt;a href=&quot;https://www.boost.org/&quot;&gt;https://www.boost.org/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Download page: &lt;a href=&quot;https://www.boost.org/users/download/&quot;&gt;https://www.boost.org/users/download/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;下载页面：&lt;a href=&quot;https://www.boost.org/users/download/&quot;&gt;https://www.boost.org/users/download/&lt;/a&gt;&lt;/p&gt;
     
     </summary>
     
@@ -121,12 +121,12 @@
     <link href="https://aphage.me/cplusplus-template-class-export/"/>
     <id>https://aphage.me/cplusplus-template-class-export/</id>
     <published>2020-03-29T21:20:46.000Z</published>
-    <updated>2020-07-15T21:18:20.276Z</updated>
+    <updated>2020-07-29T21:47:22.816Z</updated>
     
     <summary type="html">
     
       &lt;h1 id=&quot;c-template-class-export&quot;&gt;&lt;a href=&quot;#c-template-class-export&quot; class=&quot;headerlink&quot; title=&quot;c++ template class export&quot;&gt;&lt;/a&gt;c++ template class export&lt;/h1&gt;&lt;p&gt;c++ 模板类导出&lt;/p&gt;
-&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;template&lt;/span&gt;&amp;lt;&lt;span class=&quot;keyword&quot;&gt;typename&lt;/span&gt; T&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; __&lt;span class=&quot;title&quot;&gt;declspec&lt;/span&gt;(&lt;span class=&quot;title&quot;&gt;dllexport&lt;/span&gt;) &lt;span class=&quot;title&quot;&gt;Hello3&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	Hello3(&lt;span class=&quot;built_in&quot;&gt;std&lt;/span&gt;::&lt;span class=&quot;built_in&quot;&gt;string&lt;/span&gt;&amp;amp;&amp;amp; name) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;-&amp;gt;name = name;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Say&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(T v)&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&lt;span class=&quot;built_in&quot;&gt;std&lt;/span&gt;::&lt;span class=&quot;built_in&quot;&gt;cout&lt;/span&gt; &amp;lt;&amp;lt; name &amp;lt;&amp;lt; &lt;span class=&quot;string&quot;&gt;&quot;: &quot;&lt;/span&gt; &amp;lt;&amp;lt; v &amp;lt;&amp;lt; &lt;span class=&quot;built_in&quot;&gt;std&lt;/span&gt;::&lt;span class=&quot;built_in&quot;&gt;endl&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;private&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;built_in&quot;&gt;std&lt;/span&gt;::&lt;span class=&quot;built_in&quot;&gt;string&lt;/span&gt; name;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//Explicit instantiation&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;template&lt;/span&gt; &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Hello3&lt;/span&gt;&amp;lt;std::string&amp;gt;;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;template&lt;/span&gt; &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; __&lt;span class=&quot;title&quot;&gt;declspec&lt;/span&gt;(&lt;span class=&quot;title&quot;&gt;dllexport&lt;/span&gt;) &lt;span class=&quot;title&quot;&gt;Hello3&lt;/span&gt;&amp;lt;int&amp;gt;;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//__declspec(dllexport) can be written on the CLASS or here&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//__declspec(dllexport) 可以写在 CLASS 上或在这里&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;template&lt;/span&gt;&amp;lt;&lt;span class=&quot;keyword&quot;&gt;typename&lt;/span&gt; T&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; __&lt;span class=&quot;title&quot;&gt;declspec&lt;/span&gt;(&lt;span class=&quot;title&quot;&gt;dllexport&lt;/span&gt;) &lt;span class=&quot;title&quot;&gt;Hello3&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    Hello3(&lt;span class=&quot;built_in&quot;&gt;std&lt;/span&gt;::&lt;span class=&quot;built_in&quot;&gt;string&lt;/span&gt;&amp;amp;&amp;amp; name) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;-&amp;gt;name = name;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Say&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(T v)&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;built_in&quot;&gt;std&lt;/span&gt;::&lt;span class=&quot;built_in&quot;&gt;cout&lt;/span&gt; &amp;lt;&amp;lt; name &amp;lt;&amp;lt; &lt;span class=&quot;string&quot;&gt;&amp;quot;: &amp;quot;&lt;/span&gt; &amp;lt;&amp;lt; v &amp;lt;&amp;lt; &lt;span class=&quot;built_in&quot;&gt;std&lt;/span&gt;::&lt;span class=&quot;built_in&quot;&gt;endl&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;private&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;std&lt;/span&gt;::&lt;span class=&quot;built_in&quot;&gt;string&lt;/span&gt; name;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//Explicit instantiation&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;template&lt;/span&gt; &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Hello3&lt;/span&gt;&amp;lt;std::string&amp;gt;;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;template&lt;/span&gt; &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; __&lt;span class=&quot;title&quot;&gt;declspec&lt;/span&gt;(&lt;span class=&quot;title&quot;&gt;dllexport&lt;/span&gt;) &lt;span class=&quot;title&quot;&gt;Hello3&lt;/span&gt;&amp;lt;int&amp;gt;;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//__declspec(dllexport) can be written on the CLASS or here&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//__declspec(dllexport) 可以写在 CLASS 上或在这里&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;The focus is on &lt;code&gt;Explicit instantiation&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;重点是 &lt;code&gt;Explicit instantiation&lt;/code&gt;&lt;/p&gt;
     
@@ -143,7 +143,7 @@
     <link href="https://aphage.me/boss-zhipin-antianti-debug/"/>
     <id>https://aphage.me/boss-zhipin-antianti-debug/</id>
     <published>2020-03-29T14:20:46.000Z</published>
-    <updated>2020-07-15T21:18:20.276Z</updated>
+    <updated>2020-07-29T21:47:22.816Z</updated>
     
     <summary type="html">
     
@@ -167,7 +167,7 @@
     <link href="https://aphage.me/Failed-to-start-LSB/"/>
     <id>https://aphage.me/Failed-to-start-LSB/</id>
     <published>2019-05-01T22:53:25.000Z</published>
-    <updated>2020-07-15T21:18:20.276Z</updated>
+    <updated>2020-07-29T21:47:22.816Z</updated>
     
     <summary type="html">
     
@@ -191,7 +191,7 @@
     <link href="https://aphage.me/Gradle-Generate-Jar/"/>
     <id>https://aphage.me/Gradle-Generate-Jar/</id>
     <published>2019-05-01T22:53:25.000Z</published>
-    <updated>2020-07-15T21:18:20.276Z</updated>
+    <updated>2020-07-29T21:47:22.816Z</updated>
     
     <summary type="html">
     
@@ -213,7 +213,7 @@
     <link href="https://aphage.me/change-linux-max-open-file/"/>
     <id>https://aphage.me/change-linux-max-open-file/</id>
     <published>2019-05-01T22:53:25.000Z</published>
-    <updated>2020-07-15T21:18:20.276Z</updated>
+    <updated>2020-07-29T21:47:22.816Z</updated>
     
     <summary type="html">
     
@@ -247,7 +247,7 @@
     <link href="https://aphage.me/csdn-breakthrough-download/"/>
     <id>https://aphage.me/csdn-breakthrough-download/</id>
     <published>2018-10-10T22:53:25.000Z</published>
-    <updated>2020-07-15T21:18:20.276Z</updated>
+    <updated>2020-07-29T21:47:22.816Z</updated>
     
     <summary type="html">
     
@@ -269,14 +269,14 @@
     <link href="https://aphage.me/hello-world/"/>
     <id>https://aphage.me/hello-world/</id>
     <published>2017-11-20T11:30:46.000Z</published>
-    <updated>2020-07-15T21:18:20.280Z</updated>
+    <updated>2020-07-29T21:47:22.816Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a href=&quot;#Quick-Start&quot; class=&quot;headerlink&quot; title=&quot;Quick Start&quot;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;&lt;h3 id=&quot;Create-a-new-post&quot;&gt;&lt;a href=&quot;#Create-a-new-post&quot; class=&quot;headerlink&quot; title=&quot;Create a new post&quot;&gt;&lt;/a&gt;Create a new post&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo new &lt;span class=&quot;string&quot;&gt;&quot;My New Post&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a href=&quot;#Quick-Start&quot; class=&quot;headerlink&quot; title=&quot;Quick Start&quot;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;&lt;h3 id=&quot;Create-a-new-post&quot;&gt;&lt;a href=&quot;#Create-a-new-post&quot; class=&quot;headerlink&quot; title=&quot;Create a new post&quot;&gt;&lt;/a&gt;Create a new post&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo new &lt;span class=&quot;string&quot;&gt;&amp;quot;My New Post&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 
-&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/writing.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Writing&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/writing.html&quot;&gt;Writing&lt;/a&gt;&lt;/p&gt;
     
     </summary>
     
