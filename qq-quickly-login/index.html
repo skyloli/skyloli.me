@@ -1,25 +1,564 @@
-{% extends '_layout.swig' %}
-{% import '_macro/post.swig' as post_template %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
+<!DOCTYPE html>
+<html>
+<head lang="zh-Hans">
+	<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Access-Control-Allow-Origin" content="https://disqus.skk.moe/disqus/">
 
 
-{% block title %}{{ page.title }} | {{ config.title }}{% endblock %}
-
-{% block page_class %}page-post-detail{% endblock %}
+  <meta name="keywords" content="aphage,blog" />
 
 
-{% block content %}
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/moon.png?v=5.02">
+
+
+
+
+  
+
+
+  <link rel="alternate" href="/atom.xml" title="Hi, aphage" type="application/atom+xml" />
+
+
+<meta name="description" content="直接放硬（硬编码，需要的自己封装）代码了">
+<meta property="og:type" content="article">
+<meta property="og:title" content="利用QQ快捷登陆盗取Token，好友，群信息">
+<meta property="og:url" content="https://aphage.me/qq-quickly-login/index.html">
+<meta property="og:site_name" content="Hi, aphage">
+<meta property="og:description" content="直接放硬（硬编码，需要的自己封装）代码了">
+<meta property="article:published_time" content="2020-05-01T12:20:44.000Z">
+<meta property="article:modified_time" content="2020-07-30T06:48:45.161Z">
+<meta property="article:author" content="aphage">
+<meta name="twitter:card" content="summary">
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: '',
+    version: '5.02',
+    sidebar: {"display":true},
+    motion: "",
+    since: '2/9/2016 11:30:00',
+    online: JSON.parse('{"users":null,"music":"https://api.i-meto.com/meting/api?server=netease&type=playlist&id=399704763"}'),
+    site: {
+      title: 'Hi, aphage',
+      subtitle: '',
+      author: 'aphage'
+    },
+    favicon: {
+      visibilitychange: true,
+      narmal: '/images/moon.png',
+      hidden: '/images/sleep.png',
+      show_text: '(/≧▽≦/)咦！又好了！',
+      hide_text: '(●—●)喔哟，崩溃啦！'
+    }
+  };
+</script>
+
+<link href="/css/main.css?v=5.02" rel="stylesheet" type="text/css" />
+
+    <title>利用QQ快捷登陆盗取Token，好友，群信息 | Hi, aphage</title>
+	<script type="text/javascript" src=https://cdn.jsdelivr.net/npm/disqusjs@1.2.2/dist/disqus.js></script>
+	<script type="text/javascript" src=https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js></script>
+</head>
+
+<body>
+
+	<div class="container">
+		<header id="header">
+			<div class="header-inner">
+				<nav class="site-nav">
+					
+					<ul id="menu" class="menu">
+						
+							
+							<li class="menu-item menu-item-首页">
+								<a href="/" rel="section">
+								
+								  <i class="menu-item-icon fas fa-meteor"></i> <br />
+								
+								首页
+								</a>
+								
+							</li>
+						
+							
+							<li class="menu-item menu-item-实验室">
+								<a href="javascript:;" rel="section">
+								
+								  <i class="menu-item-icon fas fa-magic"></i> <br />
+								
+								实验室
+								</a>
+								
+								<ul class="submenu submenu-实验室">
+								  
+									
+									<li class="submenu-item submenu-item-shion">
+									  <a href="https://github.com/aphage/Shion" rel="section" target="_blank">
+										Shion
+									  </a>
+									</li>
+								  
+									
+									<li class="submenu-item submenu-item-aqua">
+									  <a href="https://github.com/aphage/Aqua" rel="section" target="_blank">
+										Aqua
+									  </a>
+									</li>
+								  
+								</ul>
+							  
+							</li>
+						
+							
+							<li class="menu-item menu-item-归档">
+								<a href="/archives/" rel="section">
+								
+								  <i class="menu-item-icon fas fa-archive"></i> <br />
+								
+								归档
+								</a>
+								
+							</li>
+						
+						
+						
+						<li class="menu-item search">
+						  <form class="search-form">
+							<input name="keyword" type="text" class="search-input" placeholder="站内搜索">
+							<button type="submit" class="search-submit"><i class="fas fa-search"></i></button>
+						  </form>
+						</li>
+						
+						
+					</ul>
+					
+				</nav>
+				<div class="site-brand-wrapper">
+					<div class="site-meta">
+						<div class="custom-logo-site-title">
+							<div class="brand">
+								<span class="logo-line-before"><i></i></span>
+								<div class="site-title">
+									<div id="animate-stroke" class="animate">
+									<span>
+										  <svg>
+											<use xlink:href="#strokeH"></use>
+										  </svg>
+										</span><span>
+										  <svg>
+											<use xlink:href="#strokei"></use>
+										  </svg>
+										</span><span>
+										  <svg>
+											<use xlink:href="#stroke,"></use>
+										  </svg>
+										</span><span>
+										  <svg>
+											<use xlink:href="#stroke "></use>
+										  </svg>
+										</span><span>
+										  <svg>
+											<use xlink:href="#strokea"></use>
+										  </svg>
+										</span><span>
+										  <svg>
+											<use xlink:href="#strokep"></use>
+										  </svg>
+										</span><span>
+										  <svg>
+											<use xlink:href="#strokeh"></use>
+										  </svg>
+										</span><span>
+										  <svg>
+											<use xlink:href="#strokea"></use>
+										  </svg>
+										</span><span>
+										  <svg>
+											<use xlink:href="#strokeg"></use>
+										  </svg>
+										</span><span>
+										  <svg>
+											<use xlink:href="#strokee"></use>
+										  </svg>
+										</span>
+									</div>
+									<div id="animate" class="animate">
+									<span>
+										  <svg>
+											<text id="strokeH">H</text>
+										  </svg>
+										</span><span>
+										  <svg>
+											<text id="strokei">i</text>
+										  </svg>
+										</span><span>
+										  <svg>
+											<text id="stroke,">,</text>
+										  </svg>
+										</span><span>
+										  <svg>
+											<text id="stroke "> </text>
+										  </svg>
+										</span><span>
+										  <svg>
+											<text id="strokea">a</text>
+										  </svg>
+										</span><span>
+										  <svg>
+											<text id="strokep">p</text>
+										  </svg>
+										</span><span>
+										  <svg>
+											<text id="strokeh">h</text>
+										  </svg>
+										</span><span>
+										  <svg>
+											<text id="strokea">a</text>
+										  </svg>
+										</span><span>
+										  <svg>
+											<text id="strokeg">g</text>
+										  </svg>
+										</span><span>
+										  <svg>
+											<text id="strokee">e</text>
+										  </svg>
+										</span>
+								  </div>
+								  <div id="guide" class="guide">
+									<span>H</span><span>i</span><span>,</span><span> </span><span>a</span><span>p</span><span>h</span><span>a</span><span>g</span><span>e</span>
+								  </div>
+								</div>
+								 <span class="logo-line-after"><i></i></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="site-master" itemprop="author" itemscope itemtype="http://schema.org/Person">
+					<img class="site-master-avatar scaleup" itemprop="image" src="/images/aphage.png" alt="aphage" />
+					<h2 class="site-master-description scaleup" itemprop="description">
+						不要停下来啊
+					</h2>
+				</div>
+			</div>
+		</header>
+	
+		<main id="main" class="main">
+			<div class="main-inner">
+				<div class="content-wrap">
+				  <div id="content" class="content">
+					
 
   <div id="posts" class="posts-expand">
-    {{ post_template.render(page) }}
+    
+	
+	<article class="post" itemscope itemtype="http://schema.org/Article">
+	
+	
+	
+	<div class="post-date">
+		<div class="post-month">05月</div>
+		<div class="post-day">01</div>
+	</div>
+	
+	
+	
+	<div class="post-badge">
+	
+	  <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+		<a href="/categories/c-c/" itemprop="url" rel="index">
+		  <span itemprop="name">c/c++</span>
+		</a>
+	  </span>
+	
+	  <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+		<a href="/categories/web-security/" itemprop="url" rel="index">
+		  <span itemprop="name">web-security</span>
+		</a>
+	  </span>
+	
+	</div>
+	
+	
+	<div class="post-block">
+		<link itemprop="mainEntityOfPage" href="https://aphage.me/qq-quickly-login/">
+		<span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+		  <meta itemprop="name" content="aphage">
+		  <meta itemprop="description" content="不要停下来啊">
+		  <meta itemprop="image" content="/images/aphage.png">
+		</span>
+		
+		<span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+		  <meta itemprop="name" content="Hi, aphage">
+		</span>
+		<header class="post-header">
+			
+			<h1 class="post-title" itemprop="name headline">
+            
+				利用QQ快捷登陆盗取Token，好友，群信息
+			
+			</h1>
+			
+			
+			<div class="post-meta">
+			  <span class="post-time">
+				
+				  <span class="post-meta-item-icon">
+					<i class="far fa-calendar"></i>
+				  </span>
+				  
+					<span class="post-meta-item-text">发表于</span>
+				  
+				  <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-05-01T12:20:44+00:00">2020-05-01</time>
+				
+
+				
+
+				
+			  </span>
+			</div>
+		</header>
+		
+		
+		
+		
+		
+		<div class="post-body" itemprop="articleBody">
+		
+			<p>直接放硬（硬编码，需要的自己封装）代码了</p>
+<a id="more"></a>
+
+<p>原理可以看这篇文章</p>
+<p><a href="https://blog.csdn.net/qq3401247010/article/details/77867410" target="_blank" rel="noopener">https://blog.csdn.net/qq3401247010/article/details/77867410</a></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;ctime&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> _USE_MATH_DEFINES</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;curl/curl.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;json/json.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">size_t</span> <span class="title">CurlWrite_CallbackFunc_StdString</span><span class="params">(<span class="keyword">void</span>* contents, <span class="keyword">size_t</span> <span class="built_in">size</span>, <span class="keyword">size_t</span> nmemb, <span class="built_in">std</span>::<span class="built_in">string</span>* s)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">size_t</span> newLength = <span class="built_in">size</span> * nmemb;</span><br><span class="line">	<span class="keyword">try</span> &#123;</span><br><span class="line">		s-&gt;append((<span class="keyword">char</span>*)contents, newLength);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">catch</span> (<span class="built_in">std</span>::bad_alloc&amp; e) &#123;</span><br><span class="line">		<span class="comment">//handle memory problem</span></span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> newLength;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">get_random</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> (<span class="built_in">std</span>::rand() % (<span class="number">99</span> - a + <span class="number">1</span>)) + a;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="built_in">std</span>::<span class="built_in">string</span> <span class="title">UTF8ToGBEx</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span>* utf8)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (!utf8 || <span class="built_in">strlen</span>(utf8) &lt; <span class="number">1</span>)</span><br><span class="line">		<span class="keyword">return</span> <span class="string">""</span>;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">stringstream</span> ss;</span><br><span class="line">	<span class="keyword">int</span> len = MultiByteToWideChar(CP_UTF8, <span class="number">0</span>, utf8, <span class="number">-1</span>, <span class="literal">NULL</span>, <span class="number">0</span>);</span><br><span class="line">	<span class="keyword">wchar_t</span>* wstr = <span class="keyword">new</span> <span class="keyword">wchar_t</span>[len + <span class="number">1</span>];</span><br><span class="line">	<span class="built_in">memset</span>(wstr, <span class="number">0</span>, len + <span class="number">1</span>);</span><br><span class="line">	MultiByteToWideChar(CP_UTF8, <span class="number">0</span>, utf8, <span class="number">-1</span>, wstr, len);</span><br><span class="line">	len = WideCharToMultiByte(CP_ACP, <span class="number">0</span>, wstr, <span class="number">-1</span>, <span class="literal">NULL</span>, <span class="number">0</span>, <span class="literal">NULL</span>, <span class="literal">NULL</span>);</span><br><span class="line">	<span class="keyword">char</span>* str = <span class="keyword">new</span> <span class="keyword">char</span>[len + <span class="number">1</span>];</span><br><span class="line">	<span class="built_in">memset</span>(str, <span class="number">0</span>, len + <span class="number">1</span>);</span><br><span class="line">	WideCharToMultiByte(CP_ACP, <span class="number">0</span>, wstr, <span class="number">-1</span>, str, len, <span class="literal">NULL</span>, <span class="literal">NULL</span>);</span><br><span class="line">	ss &lt;&lt; str;</span><br><span class="line">	<span class="keyword">delete</span>[]wstr;</span><br><span class="line">	<span class="keyword">delete</span>[]str;</span><br><span class="line">	<span class="keyword">return</span> ss.str();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	CURL* curl;</span><br><span class="line">	CURLcode res;</span><br><span class="line">	<span class="built_in">std</span>::srand((<span class="keyword">unsigned</span> <span class="keyword">int</span>)<span class="built_in">std</span>::time(<span class="literal">nullptr</span>));</span><br><span class="line"></span><br><span class="line">	<span class="keyword">auto</span> r = get_random(<span class="number">1</span>, <span class="number">99</span>) / M_PI / <span class="number">100</span>;</span><br><span class="line"></span><br><span class="line">	curl = curl_easy_init();</span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">string</span> s;</span><br><span class="line">	<span class="keyword">if</span> (curl) &#123;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">do</span> &#123;</span><br><span class="line"></span><br><span class="line">			curl_easy_setopt(curl, CURLOPT_URL, <span class="string">"https://xui.ptlogin2.qq.com/cgi-bin/xlogin?link_target=blank&amp;pt_disable_pwd=1&amp;appid=716027601&amp;daid=377&amp;target=self&amp;style=11&amp;s_url=https%3A//connect.qq.com/widget/shareqq/success.html"</span>);</span><br><span class="line">			curl_easy_setopt(curl, CURLOPT_WRITEDATA, &amp;s);</span><br><span class="line">			curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, CurlWrite_CallbackFunc_StdString);</span><br><span class="line"></span><br><span class="line">			curl_easy_setopt(curl, CURLOPT_SSL_VERIFYPEER, <span class="number">0L</span>); <span class="comment">//only for https</span></span><br><span class="line">			curl_easy_setopt(curl, CURLOPT_SSL_VERIFYHOST, <span class="number">0L</span>); <span class="comment">//only for https</span></span><br><span class="line">			curl_easy_setopt(curl, CURLOPT_HEADER, <span class="number">1L</span>);</span><br><span class="line">			curl_easy_setopt(curl, CURLOPT_VERBOSE, <span class="number">0L</span>); <span class="comment">//remove this to disable verbose output</span></span><br><span class="line">			curl_easy_setopt(curl, CURLOPT_COOKIEFILE, <span class="string">"/xxtemp/cookies.txt"</span>);</span><br><span class="line">			curl_easy_setopt(curl, CURLOPT_COOKIEJAR, <span class="string">"/xxtemp/cookies.txt"</span>);</span><br><span class="line"></span><br><span class="line">			curl_easy_setopt(curl, CURLOPT_USERAGENT, <span class="string">"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36"</span>);</span><br><span class="line">			curl_easy_setopt(curl, CURLOPT_REFERER, <span class="string">"https://connect.qq.com/widget/shareqq/index.html?url=https%3A%2F%2Fwww.bilibili.com"</span>);</span><br><span class="line"></span><br><span class="line">			res = curl_easy_perform(curl);</span><br><span class="line"></span><br><span class="line">			<span class="comment">/* Check for errors */</span></span><br><span class="line">			<span class="keyword">if</span> (res != CURLE_OK)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="built_in">fprintf</span>(<span class="built_in">stderr</span>, <span class="string">"curl_easy_perform() failed: %s\n"</span>,</span><br><span class="line">					curl_easy_strerror(res));</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="built_in">std</span>::<span class="built_in">string</span> t_cookie_name = <span class="string">"Set-Cookie: pt_local_token="</span>;</span><br><span class="line">			<span class="keyword">auto</span> index = s.<span class="built_in">find</span>(t_cookie_name);</span><br><span class="line">			<span class="keyword">if</span> (index == <span class="built_in">std</span>::<span class="built_in">string</span>::npos)</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			<span class="keyword">auto</span> pt_local_token = s.substr(index + t_cookie_name.length(), s.<span class="built_in">find</span>(<span class="string">";"</span>, index) - index - t_cookie_name.length());</span><br><span class="line">			<span class="built_in">std</span>::<span class="built_in">string</span> t_url = <span class="string">"https://localhost.ptlogin2.qq.com:4301/pt_get_uins?callback=ptui_getuins_CB&amp;r="</span>;</span><br><span class="line">			t_url.append(<span class="built_in">std</span>::to_string(r));</span><br><span class="line">			t_url.append(<span class="string">"&amp;pt_local_tk="</span>);</span><br><span class="line">			t_url.append(pt_local_token);</span><br><span class="line"></span><br><span class="line">			s.<span class="built_in">clear</span>();</span><br><span class="line">			curl_easy_setopt(curl, CURLOPT_URL, t_url.c_str());</span><br><span class="line">			curl_easy_setopt(curl, CURLOPT_REFERER, <span class="string">"https://xui.ptlogin2.qq.com/cgi-bin/xlogin?link_target=blank&amp;pt_disable_pwd=1&amp;appid=716027601&amp;daid=377&amp;target=self&amp;style=11&amp;s_url=https%3A//connect.qq.com/widget/shareqq/success.html"</span>);</span><br><span class="line">			res = curl_easy_perform(curl);</span><br><span class="line"></span><br><span class="line">			<span class="comment">/* Check for errors */</span></span><br><span class="line">			<span class="keyword">if</span> (res != CURLE_OK)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="built_in">fprintf</span>(<span class="built_in">stderr</span>, <span class="string">"curl_easy_perform() failed: %s\n"</span>,</span><br><span class="line">					curl_easy_strerror(res));</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="built_in">std</span>::<span class="built_in">string</span> t_var_sso_uin_list = <span class="string">"var_sso_uin_list="</span>;</span><br><span class="line">			<span class="keyword">auto</span> var_sso_uin_list_index = s.<span class="built_in">find</span>(t_var_sso_uin_list);</span><br><span class="line">			<span class="keyword">if</span> (var_sso_uin_list_index == <span class="built_in">std</span>::<span class="built_in">string</span>::npos)</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			<span class="built_in">std</span>::<span class="built_in">string</span> var_sso_uin_list_s = s.substr(var_sso_uin_list_index + t_var_sso_uin_list.length(), s.<span class="built_in">find</span>(<span class="string">";"</span>, var_sso_uin_list_index + t_var_sso_uin_list.length()) - var_sso_uin_list_index - t_var_sso_uin_list.length());</span><br><span class="line">			Json::CharReaderBuilder builder;</span><br><span class="line">			<span class="function"><span class="keyword">const</span> <span class="built_in">std</span>::<span class="built_in">unique_ptr</span>&lt;Json::CharReader&gt; <span class="title">reader</span><span class="params">(builder.newCharReader())</span></span>;</span><br><span class="line">			Json::Value root;</span><br><span class="line">			JSONCPP_STRING err;</span><br><span class="line">			<span class="keyword">if</span> (!reader-&gt;parse(var_sso_uin_list_s.c_str(), var_sso_uin_list_s.c_str() + var_sso_uin_list_s.length(), &amp;root,</span><br><span class="line">				&amp;err)) &#123;</span><br><span class="line">				<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"error"</span> &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">size_t</span> i = <span class="number">0</span>; i &lt; root.<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">				<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; root[i][<span class="string">"account"</span>].asString() &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">				t_url = <span class="string">"https://localhost.ptlogin2.qq.com:4301/pt_get_st?clientuin="</span>;</span><br><span class="line">				t_url.append(root[i][<span class="string">"account"</span>].asString());</span><br><span class="line">				t_url.append(<span class="string">"&amp;callback=ptui_getst_CB&amp;r="</span>);</span><br><span class="line">				t_url.append(<span class="built_in">std</span>::to_string(r));</span><br><span class="line">				t_url.append(<span class="string">"&amp;pt_local_tk="</span>);</span><br><span class="line">				t_url.append(pt_local_token);</span><br><span class="line"></span><br><span class="line">				s.<span class="built_in">clear</span>();</span><br><span class="line">				curl_easy_setopt(curl, CURLOPT_URL, t_url.c_str());</span><br><span class="line">				curl_easy_setopt(curl, CURLOPT_REFERER, <span class="string">"https://xui.ptlogin2.qq.com/cgi-bin/xlogin?link_target=blank&amp;pt_disable_pwd=1&amp;appid=716027601&amp;daid=377&amp;target=self&amp;style=11&amp;s_url=https%3A//connect.qq.com/widget/shareqq/success.html"</span>);</span><br><span class="line">				res = curl_easy_perform(curl);</span><br><span class="line"></span><br><span class="line">				<span class="comment">/* Check for errors */</span></span><br><span class="line">				<span class="keyword">if</span> (res != CURLE_OK)</span><br><span class="line">				&#123;</span><br><span class="line">					<span class="built_in">fprintf</span>(<span class="built_in">stderr</span>, <span class="string">"curl_easy_perform() failed: %s\n"</span>,</span><br><span class="line">						curl_easy_strerror(res));</span><br><span class="line">					<span class="keyword">break</span>;</span><br><span class="line">				&#125;</span><br><span class="line"></span><br><span class="line">				t_url = <span class="string">"https://ssl.ptlogin2.qq.com/jump?clientuin="</span>;</span><br><span class="line">				t_url.append(root[i][<span class="string">"account"</span>].asString());</span><br><span class="line">				t_url.append(<span class="string">"&amp;pt_local_tk="</span>);</span><br><span class="line">				t_url.append(pt_local_token);</span><br><span class="line">				t_url.append(<span class="string">"&amp;keyindex=9&amp;pt_aid=716027601&amp;daid=377&amp;u1=https%3A%2F%2Fconnect.qq.com%2Fwidget%2Fshareqq%2Fsuccess.html&amp;pt_3rd_aid=0&amp;ptopt=1&amp;style=40&amp;has_onekey=1"</span>);</span><br><span class="line"></span><br><span class="line">				s.<span class="built_in">clear</span>();</span><br><span class="line">				curl_easy_setopt(curl, CURLOPT_URL, t_url.c_str());</span><br><span class="line">				curl_easy_setopt(curl, CURLOPT_REFERER, <span class="string">"https://xui.ptlogin2.qq.com/cgi-bin/xlogin?link_target=blank&amp;pt_disable_pwd=1&amp;appid=716027601&amp;daid=377&amp;target=self&amp;style=11&amp;s_url=https%3A//connect.qq.com/widget/shareqq/success.html"</span>);</span><br><span class="line">				res = curl_easy_perform(curl);</span><br><span class="line"></span><br><span class="line">				<span class="comment">/* Check for errors */</span></span><br><span class="line">				<span class="keyword">if</span> (res != CURLE_OK)</span><br><span class="line">				&#123;</span><br><span class="line">					<span class="built_in">fprintf</span>(<span class="built_in">stderr</span>, <span class="string">"curl_easy_perform() failed: %s\n"</span>,</span><br><span class="line">						curl_easy_strerror(res));</span><br><span class="line">					<span class="keyword">break</span>;</span><br><span class="line">				&#125;</span><br><span class="line"></span><br><span class="line">				<span class="built_in">std</span>::<span class="built_in">string</span> t_target_url = <span class="string">"ptui_qlogin_CB('0', '"</span>;</span><br><span class="line">				<span class="keyword">auto</span> target_url_index = s.<span class="built_in">find</span>(t_target_url);</span><br><span class="line">				<span class="keyword">if</span> (target_url_index == <span class="built_in">std</span>::<span class="built_in">string</span>::npos)</span><br><span class="line">					<span class="keyword">break</span>;</span><br><span class="line">				<span class="built_in">std</span>::<span class="built_in">string</span> target_url_s = s.substr(target_url_index + t_target_url.length(), s.<span class="built_in">find</span>(<span class="string">"'"</span>, target_url_index + t_target_url.length()) - target_url_index - t_target_url.length());</span><br><span class="line">				</span><br><span class="line">				s.<span class="built_in">clear</span>();</span><br><span class="line">				curl_easy_setopt(curl, CURLOPT_URL, target_url_s.c_str());</span><br><span class="line">				curl_easy_setopt(curl, CURLOPT_REFERER, <span class="string">"https://xui.ptlogin2.qq.com/cgi-bin/xlogin?link_target=blank&amp;pt_disable_pwd=1&amp;appid=716027601&amp;daid=377&amp;target=self&amp;style=11&amp;s_url=https%3A//connect.qq.com/widget/shareqq/success.html"</span>);</span><br><span class="line">				res = curl_easy_perform(curl);</span><br><span class="line"></span><br><span class="line">				<span class="comment">/* Check for errors */</span></span><br><span class="line">				<span class="keyword">if</span> (res != CURLE_OK)</span><br><span class="line">				&#123;</span><br><span class="line">					<span class="built_in">fprintf</span>(<span class="built_in">stderr</span>, <span class="string">"curl_easy_perform() failed: %s\n"</span>,</span><br><span class="line">						curl_easy_strerror(res));</span><br><span class="line">					<span class="keyword">break</span>;</span><br><span class="line">				&#125;</span><br><span class="line"></span><br><span class="line">				<span class="comment">//获取p_skey uin skey</span></span><br><span class="line">				<span class="built_in">std</span>::<span class="built_in">string</span> p_skey_name = <span class="string">"Set-Cookie: p_skey="</span>;</span><br><span class="line">				<span class="keyword">auto</span> p_skey_index = s.<span class="built_in">find</span>(p_skey_name);</span><br><span class="line">				<span class="keyword">if</span> (p_skey_index == <span class="built_in">std</span>::<span class="built_in">string</span>::npos)</span><br><span class="line">					<span class="keyword">break</span>;</span><br><span class="line">				<span class="built_in">std</span>::<span class="built_in">string</span> p_skey = s.substr(p_skey_index + p_skey_name.length(), s.<span class="built_in">find</span>(<span class="string">";"</span>, p_skey_index + p_skey_name.length()) - p_skey_index - p_skey_name.length());</span><br><span class="line"></span><br><span class="line">				<span class="built_in">std</span>::<span class="built_in">string</span> uin_name = <span class="string">"Set-Cookie: uin="</span>;</span><br><span class="line">				<span class="keyword">auto</span> uin_index = s.<span class="built_in">find</span>(uin_name);</span><br><span class="line">				<span class="keyword">if</span> (uin_index == <span class="built_in">std</span>::<span class="built_in">string</span>::npos)</span><br><span class="line">					<span class="keyword">break</span>;</span><br><span class="line">				<span class="built_in">std</span>::<span class="built_in">string</span> uin = s.substr(uin_index + uin_name.length(), s.<span class="built_in">find</span>(<span class="string">";"</span>, uin_index + uin_name.length()) - uin_index - uin_name.length());</span><br><span class="line">				</span><br><span class="line">				<span class="built_in">std</span>::<span class="built_in">string</span> skey_name = <span class="string">"Set-Cookie: skey="</span>;</span><br><span class="line">				<span class="keyword">auto</span> skey_index = s.<span class="built_in">find</span>(skey_name);</span><br><span class="line">				<span class="keyword">if</span> (skey_index == <span class="built_in">std</span>::<span class="built_in">string</span>::npos)</span><br><span class="line">					<span class="keyword">break</span>;</span><br><span class="line">				<span class="built_in">std</span>::<span class="built_in">string</span> skey = s.substr(skey_index + skey_name.length(), s.<span class="built_in">find</span>(<span class="string">";"</span>, skey_index + skey_name.length()) - skey_index - skey_name.length());</span><br><span class="line"></span><br><span class="line">				s.<span class="built_in">clear</span>();</span><br><span class="line">				curl_easy_setopt(curl, CURLOPT_URL, <span class="string">"https://cgi.connect.qq.com/proxy.html?t=20120217001&amp;callback=1&amp;id=1"</span>);</span><br><span class="line">				curl_easy_setopt(curl, CURLOPT_REFERER, <span class="string">"https://connect.qq.com/widget/shareqq/index.html?url=https%3A%2F%2Fwww.bilibili.com"</span>);</span><br><span class="line">				<span class="built_in">std</span>::<span class="built_in">string</span> cookies = <span class="string">"p_skey="</span>;</span><br><span class="line">				cookies.append(p_skey);</span><br><span class="line">				cookies.append(<span class="string">"; uin="</span>);</span><br><span class="line">				cookies.append(uin);</span><br><span class="line">				cookies.append(<span class="string">"; skey="</span>);</span><br><span class="line">				cookies.append(skey);</span><br><span class="line">				cookies.append(<span class="string">";"</span>);</span><br><span class="line">				curl_easy_setopt(curl, CURLOPT_COOKIE, cookies.c_str());</span><br><span class="line">				::Sleep(<span class="number">3000</span>);<span class="comment">//后面这里太快，调用接口会404，官方自己也有这个问题</span></span><br><span class="line">				res = curl_easy_perform(curl);</span><br><span class="line"></span><br><span class="line">				<span class="comment">/* Check for errors */</span></span><br><span class="line">				<span class="keyword">if</span> (res != CURLE_OK)</span><br><span class="line">				&#123;</span><br><span class="line">					<span class="built_in">fprintf</span>(<span class="built_in">stderr</span>, <span class="string">"curl_easy_perform() failed: %s\n"</span>,</span><br><span class="line">						curl_easy_strerror(res));</span><br><span class="line">					<span class="keyword">break</span>;</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="built_in">std</span>::<span class="built_in">string</span> is_first = <span class="string">"https://cgi.connect.qq.com/qqconnectopen/is_first?t="</span>;</span><br><span class="line">				is_first.append(<span class="built_in">std</span>::to_string(<span class="built_in">std</span>::time(<span class="literal">nullptr</span>)));</span><br><span class="line"></span><br><span class="line">				s.<span class="built_in">clear</span>();</span><br><span class="line">				curl_easy_setopt(curl, CURLOPT_URL, is_first.c_str());</span><br><span class="line">				curl_easy_setopt(curl, CURLOPT_REFERER, <span class="string">"https://cgi.connect.qq.com/proxy.html?t=20120217001&amp;callback=1&amp;id=1"</span>);</span><br><span class="line">				::Sleep(<span class="number">3000</span>);</span><br><span class="line">				res = curl_easy_perform(curl);</span><br><span class="line"></span><br><span class="line">				<span class="comment">/* Check for errors */</span></span><br><span class="line">				<span class="keyword">if</span> (res != CURLE_OK)</span><br><span class="line">				&#123;</span><br><span class="line">					<span class="built_in">fprintf</span>(<span class="built_in">stderr</span>, <span class="string">"curl_easy_perform() failed: %s\n"</span>,</span><br><span class="line">						curl_easy_strerror(res));</span><br><span class="line">					<span class="keyword">break</span>;</span><br><span class="line">				&#125;</span><br><span class="line">				</span><br><span class="line">				<span class="built_in">std</span>::<span class="built_in">string</span> get_user_friends = <span class="string">"https://cgi.connect.qq.com/qqconnectopen/openapi/get_user_friends?t="</span>;</span><br><span class="line">				get_user_friends.append(<span class="built_in">std</span>::to_string(<span class="built_in">std</span>::time(<span class="literal">nullptr</span>)));</span><br><span class="line"></span><br><span class="line">				s.<span class="built_in">clear</span>();</span><br><span class="line">				curl_easy_setopt(curl, CURLOPT_URL, get_user_friends.c_str());</span><br><span class="line">				curl_easy_setopt(curl, CURLOPT_REFERER, <span class="string">"https://cgi.connect.qq.com/proxy.html?t=20120217001&amp;callback=1&amp;id=1"</span>);</span><br><span class="line">				curl_easy_setopt(curl, CURLOPT_COOKIE, cookies.c_str());</span><br><span class="line">				::Sleep(<span class="number">3000</span>);</span><br><span class="line">				res = curl_easy_perform(curl);</span><br><span class="line"></span><br><span class="line">				<span class="comment">/* Check for errors */</span></span><br><span class="line">				<span class="keyword">if</span> (res != CURLE_OK)</span><br><span class="line">				&#123;</span><br><span class="line">					<span class="built_in">fprintf</span>(<span class="built_in">stderr</span>, <span class="string">"curl_easy_perform() failed: %s\n"</span>,</span><br><span class="line">						curl_easy_strerror(res));</span><br><span class="line">					<span class="keyword">break</span>;</span><br><span class="line">				&#125;</span><br><span class="line">				s = UTF8ToGBEx(s.c_str());</span><br><span class="line">				<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; s &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">		&#125; <span class="keyword">while</span> (<span class="literal">false</span>);</span><br><span class="line"></span><br><span class="line">		<span class="comment">/* always cleanup */</span></span><br><span class="line">		curl_easy_cleanup(curl);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"Program finished!"</span> &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+		
+		</div>
+		
+		
+		
+		
+		
+		  <!-- <div class="post-share">分享到：</div> -->
+		  
+		  
+			
+		  <footer class="post-footer">
+				
+				
+				
+				<div class="post-nav">
+				  <div class="post-nav-next post-nav-item">
+					
+					  <a href="/use-vcpkg/" rel="next" title="使用Vcpkg进行包管理">
+						<i class="fas fa-angle-left"></i> 使用Vcpkg进行包管理
+					  </a>
+					
+				  </div>
+
+				  <span class="post-nav-divider"></span>
+
+				  <div class="post-nav-prev post-nav-item">
+					
+				  </div>
+				</div>
+			  
+		  </footer>
+		
+		
+	</div>
+	
+	
+	
+	</article>
+
   </div>
 
-{% endblock %}
 
-{% block sidebar %}
-  {{ sidebar_template.render(true) }}
-{% endblock %}
+				  </div>
+				  
+	
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <div id="dsqjs">
+          <section class="dsqjs-info">
+            <p id="dsqjs-load-disqus" class="dsqjs-message">��������ģʽ������...�����ʱ���޷����أ������ disq.us | disquscdn.com | disqus.com ���ô���</p>
+          </section>
+        </div>
+      </div>
+    </div>
+	<script type="text/javascript">
+        window.DISQUS = null;
+        new DisqusJS({
+          shortname: 'https-aphage-me',
+          siteName: 'Hi, aphage',
+          identifier: 'qq-quickly-login/',
+          url: 'https://aphage.me/qq-quickly-login/',
+          api: 'https://disqus.skk.moe/disqus/',
+          apikey: 'X6lH7WGXCSRhphPofmv1nbd0nRmb8XLjJK93uKKPujtGrPg3KvE7i9mvxqRHA2mQ',
+          admin: 'aphage',
+          adminLabel: '',
+        });
+    </script>
+	
 
-{% block script_extra %}
-  {% include '_scripts/pages/post-details.swig' %}
-{% endblock %}
+
+				</div>
+				
+				  
+  
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/card.jpg"
+                alt="aphage" />
+            
+              <p class="site-author-name" itemprop="name"><span style="opacity:.2;">盯</span>aphage</p>
+              <p class="site-description motion-element" itemprop="description">快来抓我啊？</p>
+          </div>
+
+          <div class="links-of-author motion-element">
+            
+              
+                <span class="links-of-author-item scaleup">
+                  <a href="https://twitter.com/diyphage" target="_blank" title="Twitter">
+                    
+                       <i class="fab fa-twitter" style="color: #2FB0EC"><span>aphage</span></i></a>
+                </span>
+              
+                <span class="links-of-author-item scaleup">
+                  <a href="https://space.bilibili.com/5450141" target="_blank" title="bilibili">
+                    
+                       <i style="fill: #20B0E3;"><svg t="1581180571735" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1122"><path d="M813.2864 234.5216h-53.0176l46.3872-46.3872c19.8912-19.8912 19.8912-59.648 0-79.5136s-59.648-19.8912-79.5136 0l-132.5312 125.9008h-159.0272l-132.5312-125.9008c-19.8912-19.8912-59.648-19.8912-79.5136 0s-19.8912 59.648 0 79.5136l46.3872 46.3872H216.9088c-92.7744 0-165.6576 72.8832-165.6576 165.6576v357.8112c0 99.4048 72.8832 172.288 165.6576 172.288h589.7216c92.7744 0 165.6576-72.8832 165.6576-165.6576V400.1792c6.6304-92.7744-66.2528-165.6576-159.0272-165.6576z m46.3872 523.4688a59.392 59.392 0 0 1-59.648 59.648H223.5392a59.392 59.392 0 0 1-59.648-59.648V406.8096a59.392 59.392 0 0 1 59.648-59.648h576.4864a59.392 59.392 0 0 1 59.648 59.648v351.1808z m-516.864-291.5328a59.392 59.392 0 0 0-59.648 59.648v59.648c0 33.1264 26.496 59.648 59.648 59.648s59.648-26.496 59.648-59.648v-59.648a59.392 59.392 0 0 0-59.648-59.648z m344.576 0a59.392 59.392 0 0 0-59.648 59.648v59.648c0 33.1264 26.496 59.648 59.648 59.648s59.648-26.496 59.648-59.648v-59.648a59.392 59.392 0 0 0-59.648-59.648z" p-id="1123"></path></svg><span>aphage</span></i></a>
+                </span>
+              
+                <span class="links-of-author-item scaleup">
+                  <a href="https://github.com/aphage" target="_blank" title="GitHub">
+                    
+                       <i class="fab fa-github" style="color: #191717"><span>aphage</span></i></a>
+                </span>
+              
+            
+          </div>
+
+          <div class="des-of-author">
+              <div class="des-of-author-nav">
+                
+                  
+                    <div class="des-of-author-title active" data-index="1">最喜欢的作品</div>
+                  
+                
+                  
+                    <div class="des-of-author-title" data-index="2">最喜欢的女孩子</div>
+                  
+                
+                  
+                    <div class="des-of-author-title" data-index="3">梦想</div>
+                  
+                
+                  
+                    <div class="des-of-author-title" data-index="4">工作</div>
+                  
+                
+              </div>
+              <div class="des-of-author-panel">
+                
+                  
+                    <div class="des-of-author-des active" data-index="1">某科学的超电磁炮、钢之炼金术师、刀剑神域、OVERLORD、因为太怕痛就全点防御力了、关于我转生变成史莱姆这档事、欢迎来到实力至上主义的教室、Re：从零开始的异世界生活</div>
+                  
+                
+                  
+                    <div class="des-of-author-des" data-index="2">御坂美琴</div>
+                  
+                
+                  
+                    <div class="des-of-author-des" data-index="3">做自己想做的事情</div>
+                  
+                
+                  
+                    <div class="des-of-author-des" data-index="4">失业</div>
+                  
+                
+              </div>
+          </div>
+
+        </div>
+      </section>
+
+      
+
+    </div>
+  </aside>
+
+
+				
+			  </div>
+		</main>
+		
+		<footer id="footer" class="footer">
+			<div class="footer-image"></div>
+			<div class="footer-inner">
+				<p>博客已萌萌哒运行<span id="since"></span><span class="my-face">(●'◡'●)ﾉ♥</span></p>
+<p>托管于<a href="https://github.com/" target="_blank" rel="nofollow"> GitHub</a>. <a href="https://dash.cloudflare.com" target="_blank" rel="nofollow">cloudflare </a>提供 CDN 解析服务.</p>
+
+<p>
+	© <span itemprop="copyrightYear">2020</span> Hi, aphage.
+    
+		由 <a href="https://hexo.io/" target="_blank" class="external" rel="nofollow">Hexo</a> 强力驱动.
+	
+	
+    Theme By <a href="https://github.com/aphage" target="_blank" class="external" rel="nofollow">Level6</a> v5.02.
+	
+	
+    <a href="/sitemap.xml" target="_blank">站点地图</a>.
+	
+    
+</p>
+<p>
+	Made with <i class="fas fa-heart throb" style="color: #d43f57;"></i>
+	by <span class="author" itemprop="copyrightHolder">aphage</span>.
+</p>
+
+			</div>
+		</footer>
+	</div>
+	
+	<div id="aplayer-fixed"></div>
+	
+	<script type="text/javascript" src="/js/Level6.min.js?v=5.02"></script>
+	<script>
+    var serviceWorkerUri = '/js/sw.js';
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register(serviceWorkerUri).then(function() {
+          if (navigator.serviceWorker.controller) {
+            console.log('Assets cached by the controlling service worker.');
+          } else {
+            console.log('Please reload this page to allow the service worker to handle network operations.');
+          }
+        }).catch(function(error) {
+          console.log('ERROR: ' + error);
+        });
+    } else {
+        console.log('Service workers are not supported in the current browser.');
+    }
+  </script>
+
+</body>
+</html>
