@@ -6,7 +6,7 @@
   <link href="https://aphage.me/atom.xml" rel="self"/>
   
   <link href="https://aphage.me/"/>
-  <updated>2020-08-24T02:28:59.372Z</updated>
+  <updated>2020-08-24T02:48:13.252Z</updated>
   <id>https://aphage.me/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://aphage.me/qq-quickly-login/"/>
     <id>https://aphage.me/qq-quickly-login/</id>
     <published>2020-05-01T12:20:44.000Z</published>
-    <updated>2020-08-24T02:28:59.372Z</updated>
+    <updated>2020-08-24T02:48:13.252Z</updated>
     
     
     <summary type="html">&lt;p&gt;直接放硬（硬编码，需要的自己封装）代码了&lt;/p&gt;</summary>
@@ -40,7 +40,7 @@
     <link href="https://aphage.me/use-vcpkg/"/>
     <id>https://aphage.me/use-vcpkg/</id>
     <published>2020-04-29T19:31:01.000Z</published>
-    <updated>2020-08-24T02:28:59.372Z</updated>
+    <updated>2020-08-24T02:48:13.252Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h2&gt;&lt;p&gt;妈妈再也不用担心我编译openssl、boost了&lt;/p&gt;
@@ -65,7 +65,7 @@
     <link href="https://aphage.me/vs-build-shellcode-settings/"/>
     <id>https://aphage.me/vs-build-shellcode-settings/</id>
     <published>2020-04-05T21:00:00.000Z</published>
-    <updated>2020-08-24T02:28:59.372Z</updated>
+    <updated>2020-08-24T02:48:13.252Z</updated>
     
     
       
@@ -89,7 +89,7 @@
     <link href="https://aphage.me/boost-build-for-vs2019/"/>
     <id>https://aphage.me/boost-build-for-vs2019/</id>
     <published>2020-03-29T21:20:46.000Z</published>
-    <updated>2020-08-24T02:28:59.372Z</updated>
+    <updated>2020-08-24T02:48:13.252Z</updated>
     
     
     <summary type="html">&lt;p&gt;Download for boost&lt;/p&gt;
@@ -113,7 +113,7 @@
     <link href="https://aphage.me/cplusplus-template-class-export/"/>
     <id>https://aphage.me/cplusplus-template-class-export/</id>
     <published>2020-03-29T21:20:46.000Z</published>
-    <updated>2020-08-24T02:28:59.372Z</updated>
+    <updated>2020-08-24T02:48:13.252Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;c-template-class-export&quot;&gt;&lt;a href=&quot;#c-template-class-export&quot; class=&quot;headerlink&quot; title=&quot;c++ template class export&quot;&gt;&lt;/a&gt;c++ template class export&lt;/h1&gt;&lt;p&gt;c++ 模板类导出&lt;/p&gt;
@@ -133,7 +133,7 @@
     <link href="https://aphage.me/boss-zhipin-antianti-debug/"/>
     <id>https://aphage.me/boss-zhipin-antianti-debug/</id>
     <published>2020-03-29T14:20:46.000Z</published>
-    <updated>2020-08-24T02:28:59.372Z</updated>
+    <updated>2020-08-24T02:48:13.252Z</updated>
     
     
       
@@ -155,7 +155,7 @@
     <link href="https://aphage.me/Failed-to-start-LSB/"/>
     <id>https://aphage.me/Failed-to-start-LSB/</id>
     <published>2019-05-01T22:53:25.000Z</published>
-    <updated>2020-08-24T02:28:59.372Z</updated>
+    <updated>2020-08-24T02:48:13.252Z</updated>
     
     
       
@@ -177,7 +177,7 @@
     <link href="https://aphage.me/Gradle-Generate-Jar/"/>
     <id>https://aphage.me/Gradle-Generate-Jar/</id>
     <published>2019-05-01T22:53:25.000Z</published>
-    <updated>2020-08-24T02:28:59.372Z</updated>
+    <updated>2020-08-24T02:48:13.252Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;jar任务&quot;&gt;&lt;a href=&quot;#jar任务&quot; class=&quot;headerlink&quot; title=&quot;jar任务&quot;&gt;&lt;/a&gt;jar任务&lt;/h2&gt;&lt;p&gt;打包成一个Jar&lt;/p&gt;
@@ -197,7 +197,7 @@
     <link href="https://aphage.me/change-linux-max-open-file/"/>
     <id>https://aphage.me/change-linux-max-open-file/</id>
     <published>2019-05-01T22:53:25.000Z</published>
-    <updated>2020-08-24T02:28:59.372Z</updated>
+    <updated>2020-08-24T02:48:13.252Z</updated>
     
     
     <summary type="html">&lt;p&gt;查看&lt;/p&gt;
@@ -229,7 +229,7 @@
     <link href="https://aphage.me/csdn-breakthrough-download/"/>
     <id>https://aphage.me/csdn-breakthrough-download/</id>
     <published>2018-10-10T22:53:25.000Z</published>
-    <updated>2020-08-24T02:28:59.372Z</updated>
+    <updated>2020-08-24T02:48:13.252Z</updated>
     
     
       
@@ -249,7 +249,7 @@
     <link href="https://aphage.me/hello-world/"/>
     <id>https://aphage.me/hello-world/</id>
     <published>2017-11-20T11:30:46.000Z</published>
-    <updated>2020-08-24T02:28:59.372Z</updated>
+    <updated>2020-08-24T02:48:13.252Z</updated>
     
     
     <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
