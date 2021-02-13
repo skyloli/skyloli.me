@@ -8,7 +8,7 @@ install:
 before_script:
 
 script:
-  - hexo build
+  - gatsby build
 
 cache:
   npm: true
