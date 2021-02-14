@@ -11,6 +11,10 @@ const Gtag = () => {
   gtag('js', new Date());
   gtag('config', 'G-4EMLPCS7L0');
   console.log("alice foo foo");
+  return (
+    <div>
+    </div>
+  )
 }
 
 export default Gtag
