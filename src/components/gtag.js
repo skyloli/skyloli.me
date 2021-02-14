@@ -1,19 +1,20 @@
-import React from "react"
-import Helmet from "react-helmet";
+import { React, useEffect } from "react"
+import useScript from "../hooks/use-script"
+
+const gtag = () => {
+  useEffect(() => {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push(arguments)
+  }, [arguments])
+}
 
 const Gtag = () => {
+  useScript("https://www.googletagmanager.com/gtag/js?id=G-4EMLPCS7L0")
+  gtag('js', new Date());
+  gtag('config', 'G-4EMLPCS7L0');
+  console.log("alice foo foo");
   return (
     <div>
-      <Helmet>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-4EMLPCS7L0"></script>
-        <script>
-          window.dataLayer = window.dataLayer || []
-          function gtag(){dataLayer.push(arguments)}
-          gtag('js', new Date())
-
-          gtag('config', 'G-4EMLPCS7L0')
-        </script>
-      </Helmet>
     </div>
   )
 }
